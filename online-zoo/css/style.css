@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/*fonts*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+/* ----templates-----*/
+.header_menu, .header-row, .headerwrapper, .header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+.wrapper {
+  overflow: hidden;
+  box-sizing: border-box;
+  min-height: 100%;
+  font-family: roboto;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*-------button style------*/
+.btn {
+  width: 298px;
+  height: 54px;
+  background: #fe9013;
+  border-radius: 25px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #e47209;
+}
+
+.btn:active {
+  background: #4b9200;
+}
+
+/*-----------header------*/
+.header {
+  background: #111115;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.header__logo {
+  width: 82px;
+  height: 52px;
+  font-size: 19.0145px;
+  line-height: 120%;
+  text-align: center;
+  border: 1.18841px solid #ffffff;
+  position: relative;
+  transition: all 0.3s linear;
+}
+
+h1 {
+  height: 44.91px;
+}
+
+.logo_icon {
+  position: absolute;
+  left: 8.53px;
+  bottom: 7.69px;
+}
+
+.orange {
+  color: #f9804b;
+}
+
+.headerwrapper {
+  height: 80px;
+  color: #ffffff;
+  width: 100%;
+  padding-left: 13.75%;
+  padding-right: 13.75%;
+}
+
+.nav {
+  margin-left: 63px;
+  width: 472px;
+}
+
+.nav_link {
+  font-weight: 400;
+  line-height: 140%;
+  transition: all 0.3s linear;
+}
+
+.designedby {
+  line-height: 140%;
+  font-weight: 500;
+  transition: all 0.3s linear;
+}
+
+.nav_link:hover {
+  color: #f9804b;
+}
+
+.designedby:hover {
+  color: #f9804b;
+}
+
+/*------watchonline-----*/
+.watchonline {
+  height: 780px;
+  width: 100%;
+  background: url(../img/watch_your_favorite/Giant\ Panda.svg) no-repeat center/cover;
+}
+.watchonline_btn {
+  position: absolute;
+  left: calc(50% - 149px + 332px);
+  top: 626px;
+}
+
+.orangeelipse {
+  width: 465px;
+  height: 465px;
+  position: absolute;
+  top: 92px;
+  left: calc(50% - 232.5px + 239.5px);
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 50%;
+}
+
+.watchonlinetext {
+  position: absolute;
+  width: 500.31px;
+  height: 400px;
+  left: calc(50% - 250.155px + 330.15px);
+  top: 166px;
+  font-weight: 700;
+  font-size: 106.496px;
+  line-height: 75%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.yellow {
+  color: #ffee2e;
+}
+
+/*-----backstage------*/

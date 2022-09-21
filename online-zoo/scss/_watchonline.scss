@@ -1,0 +1,40 @@
+.watchonline {
+  height: 780px;
+  width: 100%;
+  background: url(../img/watch_your_favorite/Giant\ Panda.svg) no-repeat
+    center/cover;
+  &_content {
+  }
+
+  &_btn {
+    position: absolute;
+    left: calc(50% - 298px / 2 + 332px);
+    top: 626px;
+  }
+}
+
+.orangeelipse {
+  width: 465px;
+  height: 465px;
+  position: absolute;
+  top: 92px;
+  left: calc(50% - 465px / 2 + 239.5px);
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 50%;
+}
+.watchonlinetext {
+  position: absolute;
+  width: 500.31px;
+  height: 400px;
+  left: calc(50% - 500.31px / 2 + 330.15px);
+  top: 166px;
+  font-weight: 700;
+  font-size: 106.496px;
+  line-height: 75%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.yellow {
+  color: #ffee2e;
+}
