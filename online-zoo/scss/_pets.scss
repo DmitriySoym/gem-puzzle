@@ -1,0 +1,138 @@
+.pets {
+  &_name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 117%;
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+  &_area {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 110%;
+    color: #000000;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1158px;
+    height: 891px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    overflow: hidden;
+    width: 366px;
+    height: 426px;
+    border: 1px solid transparent;
+    background: linear-gradient(45deg, #fa6f32 0%, #fe9013 100%) border-box;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    &_poto {
+      transition: all 0.3s ease-in-out;
+    }
+    &_poto img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    &_info {
+      background: #fff;
+      @extend %flexforitem;
+      padding-left: 14px;
+      padding-right: 1px;
+      height: 60px;
+      position: relative;
+    }
+  }
+}
+
+/*-----hover-----*/
+.pets__item:hover .pets__item_poto {
+  transform: scale(1.1);
+  //   opacity: 0.5;
+  filter: brightness(50%);
+}
+.pets__item:hover .pets__item_name {
+  transition: all 0.3s ease-in-out;
+  transform: translate(90px, -160px);
+}
+.pets__item:hover .pets_name {
+  color: #fff;
+}
+.pets__item:hover .pets_area {
+  color: #fff;
+}
+
+// .pets__item:hover .pets__item_info {
+//   background: #ccc;
+//   transition: all 0.3s linear;
+//   color: #e47209;
+// }
+
+/*-----hover-----*/
+.banan {
+  padding-right: 11px;
+}
+
+.fish {
+  padding-right: 7px;
+  padding-bottom: 5px;
+}
+
+.petswrapper {
+  position: relative;
+  padding-top: 106px;
+  height: 1213px;
+}
+.pets_btn {
+  margin: 60px auto 0;
+}
+.prew {
+  background: white;
+  position: absolute;
+  left: 8.6%;
+  top: 42%;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+}
+.prew img {
+  margin: 2px auto;
+}
+.next {
+  background: white;
+  position: absolute;
+  right: 8.7%;
+  top: 42%;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+}
+.next img {
+  margin: 2px auto;
+}
+.slick-arrow:hover {
+  background: #e47209;
+}
+.slick-arrow:active {
+  background: #4b9200;
+}
+
+.bottom-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.bottom-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

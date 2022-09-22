@@ -32,6 +32,7 @@
   height: 54px;
   background: #fe9013; //linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   border-radius: 25px;
+  font-size: 16px;
   line-height: 140%;
   text-align: center;
   text-transform: uppercase;
@@ -55,3 +56,9 @@
 
 /*-----backstage------*/
 @import "_backstage";
+
+/*-----pets------*/
+@import "_pets";
+
+/*-----pick------*/
+@import "_pick";
