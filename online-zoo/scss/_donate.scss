@@ -1,0 +1,349 @@
+.header-donate {
+  position: relative;
+}
+.logo_icon {
+  background: url(../img/header/bamboo.svg) no-repeat;
+}
+
+.panda-photo {
+  background: url(../img/donate/panda_bg.jpg) no-repeat center/cover;
+  height: 386px;
+}
+.lighttext {
+  font-weight: 400;
+  margin-right: 3px;
+}
+
+.friendrowtitle {
+  margin-right: 11px;
+  margin-bottom: 21px;
+}
+
+.friend {
+  height: 100%;
+  padding-top: 40px;
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 130%;
+    color: #ffffff;
+    padding-right: 2px;
+    margin-bottom: 10px;
+  }
+
+  &__discription {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #ffffff;
+  }
+
+  &__subtitle {
+    font-size: 36px;
+    line-height: 130%;
+    color: #fe9013;
+    margin: 44px 0 60px 0;
+    padding-top: 2px;
+  }
+
+  &__row {
+    height: 964px;
+  }
+
+  &__qntt {
+    @extend %flexforitem;
+    padding-right: 321.51px;
+    padding-left: 307px;
+  }
+
+  &__all {
+    padding-top: 50px;
+  }
+}
+
+.friend__sub {
+  padding-left: calc(50% - 427.5px - 59.5px);
+  margin-bottom: 60px;
+}
+
+.friendwrapper {
+  max-width: 1160px;
+  width: 100%;
+  padding-bottom: 179px;
+}
+
+.number {
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 80%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 13px;
+}
+
+.mult {
+  padding-right: 52px;
+  padding-top: 27px;
+}
+
+.panda {
+  &_widget {
+    position: relative;
+    top: -3px;
+  }
+}
+
+.donate-form {
+  padding-right: 92px;
+  padding-left: 92px;
+  margin-top: 46px;
+}
+
+.amount {
+  line-height: 140%;
+  color: #000000;
+  padding-left: 4px;
+  margin-bottom: 17px;
+}
+
+.amount_scroll {
+  position: relative;
+}
+
+/*-- стилизуется область, в которой находится ползунок и полоса слайдера, в ней также полоска ползунка находится---*/
+.amount_scroll input[type="range"] {
+  -webkit-appearance: none !important; /* Скрывает слайдер для Chrome, чтобы можно было создать свой */
+
+  max-width: 976px;
+  width: 100%;
+  height: 27px;
+  background: #404950;
+  border-radius: 2px;
+  padding-right: 28px;
+  padding-left: 27px;
+  cursor: pointer;
+}
+
+// Оформление полоски слайдера
+/* Стилизуем полоску слайдера, прописываем свои стили для Chrome*/
+.amount_scroll input[type="range"]::-webkit-slider-runnable-track {
+  max-width: 915px;
+  width: 100%;
+  height: 2px;
+  border: none; /*- убирает бордер в полоске прокрутки ползунка--*/
+  background: #72828e;
+}
+
+/*оформление полосы прокрутки Firefox*/
+.amount_scroll input[type="range"]::-moz-range-track {
+  max-width: 915px;
+  width: 100%;
+  height: 2px;
+  border: none; /*- убирает бордер в полоске прокрутки ползунка--*/
+  background: #72828e;
+}
+
+// Оформление ползунка
+/* Специальные правила для браузеров на движках WebKit/Blink - Chrome*/
+.amount_scroll input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: #ffee2e;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: relative;
+  top: -4px;
+}
+
+.monthly-once input[type="radio"]:checked + label:before {
+  background: #4b9200;
+  border: none;
+}
+
+/*--стилизация ползунка для Firefox--*/
+.amount_scroll input[type="range"]::-moz-range-thumb {
+  background: #ffee2e;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: relative;
+  top: -4px;
+}
+
+.moneyammount {
+  display: flex;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #333b41;
+  margin-top: 9px;
+  max-width: 952px;
+  width: 100%;
+}
+
+.thirdsum::before {
+  content: "";
+  display: inline-block;
+  background: url(../img/donate/orangemoney.svg) no-repeat left;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  margin-right: -9px;
+}
+.moneyitem::before {
+  content: "";
+  display: inline-block;
+  background: url(../img/donate/dollaricon.svg) no-repeat left;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  margin-right: -9px;
+}
+
+.firstsum {
+  margin-right: 61px;
+}
+
+.secondsum {
+  margin-right: 59px;
+}
+
+.thirdsum {
+  margin-right: 61px;
+}
+
+.fourthsum {
+  margin-right: 73px;
+}
+
+.fifthsum {
+  margin-right: 75px;
+}
+
+.sixthsum {
+  margin-right: 75px;
+}
+
+.seventhsun {
+  margin-right: 89px;
+}
+
+.moneyitem img {
+  position: absolute;
+  top: 7px;
+  left: -13px;
+}
+
+.anotheramount input[type="number"] {
+  border: 1px solid #929699;
+  border-radius: 2px;
+  width: 266px;
+  height: 54px;
+  background: inherit;
+  padding-bottom: 3px;
+  padding-left: 7px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #929699;
+}
+
+/*-- убираем стрелки в поле инпут---*/
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/*-----*/
+.anotheramount {
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+}
+.anotheramount label {
+  position: absolute;
+  left: 601px;
+  top: 15px;
+  font-size: 21px;
+}
+
+/*----стилизация радиокнопок-----*/
+.monthlyonce {
+  display: flex;
+  padding-left: 383px;
+  margin-top: 25px;
+}
+
+.monthly-once input[type="radio"] {
+  display: none;
+}
+.monthly-once label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 0;
+  line-height: 18px;
+  user-select: none;
+  color: #ffffff;
+}
+
+.monthly-once label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border: 1px solid #fe9013;
+  border-radius: 50%;
+}
+
+/* Checked */
+.monthly-once input[type="radio"]:checked + label:before {
+  background: #4b9200;
+  border: none;
+}
+.monthly-once input[type="radio"]:checked ~ .once {
+  color: #333b41;
+}
+.monthly-once input[type="radio"]:checked ~ .monthly {
+  color: #333b41;
+}
+
+.monthly-once {
+  margin-right: 51px;
+}
+
+.pointrow {
+  position: absolute;
+  max-width: 915px;
+  width: 100%;
+  height: 8px;
+  top: 9px;
+  left: 27px;
+  display: flex;
+  justify-content: space-between;
+}
+.point {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #ffee2e;
+}
+.donatebtn {
+  padding-left: 10px;
+  margin: 34px auto 0;
+}
+
+.sharetext {
+  text-align: center;
+  margin: 32px auto 0;
+  padding-left: 3px;
+}
