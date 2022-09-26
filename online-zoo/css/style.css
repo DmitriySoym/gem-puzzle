@@ -612,6 +612,9 @@ h1 {
 }
 
 /*-----testimonials------*/
+.testimonials {
+  position: relative;
+}
 .testimonials__title {
   font-size: 36px;
   line-height: 130%;
@@ -661,7 +664,6 @@ h1 {
 
 .testimonialswrapper {
   padding-top: 140px;
-  position: relative;
   height: 919px;
   width: 1160px;
 }
@@ -1024,14 +1026,6 @@ h1 {
   position: relative;
   top: -4px;
 }
-.amount_scroll input[type=range]::-webkit-slider-thumb::after {
-  content: "";
-  background-color: blue;
-  margin: 0 10px 0 0;
-  height: 20px;
-  width: 10px;
-  display: block;
-}
 
 .monthly-once input[type=radio]:checked + label:before {
   background: #4b9200;
@@ -1223,4 +1217,15 @@ input[type=number] {
   width: 10px;
   border-radius: 50%;
   background: #ffee2e;
+}
+
+.donatebtn {
+  padding-left: 10px;
+  margin: 34px auto 0;
+}
+
+.sharetext {
+  text-align: center;
+  margin: 32px auto 0;
+  padding-left: 3px;
 }
