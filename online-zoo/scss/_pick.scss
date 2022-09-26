@@ -24,8 +24,6 @@
   opacity: 0.9;
   padding-top: 69px;
   height: 1004px;
-  &__row {
-  }
 
   &__title {
     font-size: 48px;
@@ -46,7 +44,7 @@
   &__warningifo {
     font-weight: 500;
     font-size: 16px;
-    line-height: 130%;
+    line-height: 132%;
     padding-left: calc(50% - 1061px / 2 + 49.5px);
     top: 267px;
     color: #333b41;
@@ -54,7 +52,7 @@
   }
 
   &__text {
-    width: 863px;
+    width: 970px;
     padding-left: calc(50% - 863px / 2 - 49.5px);
     font-size: 16px;
     line-height: 130%;
@@ -63,21 +61,39 @@
   }
 
   &__items {
+    @extend %flexforitem;
+    //  padding: 0 198px;
+    padding-left: calc(198 / 1160 * 100%);
+    padding-right: calc(198 / 1160 * 100%);
   }
 
   &__item {
     &_icon {
+      width: 168px;
+      height: 168px;
+      background: #ffffff;
+      border-radius: 5px;
+      border: 1px solid #f9804b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
     }
 
     &_text {
+      width: 168px;
+      height: 46px;
+      line-height: 140%;
+      color: #333b41;
     }
   }
 }
-.container {
+.pick__row_wrapper {
+  position: relative;
 }
 .pickwrapper {
   height: 835px;
-  width: 1150px;
+  width: 1160px;
   background: rgba(253, 253, 255, 0.52);
   backdrop-filter: blur(2px);
   border-radius: 20px;
@@ -85,15 +101,22 @@
 }
 .pickifo {
   &__title {
-    padding-left: calc(50% - 209px / 2 - 0.5px);
+    text-align: center;
+    margin: 0 auto 40px;
     font-size: 36px;
     line-height: 130%;
     color: #333b41;
   }
 }
 .arrow-one {
+  position: absolute;
+  left: 395px;
+  top: 60px;
 }
 .arrow-two {
+  position: absolute;
+  left: 693px;
+  top: 58px;
 }
 .donate {
   position: relative;
@@ -106,4 +129,13 @@
   background: #fe9013;
   position: absolute;
   left: 0;
+  bottom: -4px;
+}
+
+.pick_btn {
+  margin: 60px auto 0;
+}
+.correctionforitem {
+  padding-top: 5px;
+  padding-right: 1px;
 }

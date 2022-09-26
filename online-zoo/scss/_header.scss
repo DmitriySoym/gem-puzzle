@@ -9,45 +9,71 @@
     height: 52px;
     @extend %flexforitem;
     font-size: 19.0145px;
-    line-height: 120%;
-
+    line-height: 121%;
+    font-weight: 300;
     text-align: center;
     border: 1.18841px solid #ffffff;
     position: relative;
-    transition: all 0.3s linear;
+    //  transition: all 0.3s linear;
+  }
+
+  &__logo:hover {
+    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-color: #e47209;
+  }
+  &__logo:hover .logo_icon {
+    background: url(../img/header/logo_hover.svg) no-repeat;
   }
 }
 h1 {
   height: 44.91px;
+  letter-spacing: 0.2px;
 }
+
 .logo_icon {
+  background: url(../img/header/bamboo.svg) no-repeat;
   position: absolute;
   left: 8.53px;
-  bottom: 7.69px;
+  bottom: 5.69px;
+  width: 12px;
+  height: 21px;
+  display: block;
 }
-.orange {
+
+.navigation__link_active {
   color: #f9804b;
+  cursor: default;
+}
+
+.orange.navigation__link_active {
+  color: #f9804b;
+  pointer-events: none;
 }
 
 .headerwrapper {
   @extend %flexforitem;
   height: 80px;
-
   color: #ffffff;
   width: 100%;
-
   padding-left: calc(220 / 1600 * 100%);
   padding-right: calc(220 / 1600 * 100%);
 }
+
 .header-row {
   @extend %flexforitem;
 }
+
 .header_menu {
   @extend %flexforitem;
 }
+
 .nav {
   margin-left: 63px;
   width: 472px;
+  font-weight: 300;
+  line-height: 140%;
 }
 
 .nav_link {

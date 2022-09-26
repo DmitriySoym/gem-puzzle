@@ -1,4 +1,5 @@
 .pets {
+  position: relative;
   &_name {
     font-weight: 500;
     font-size: 16px;
@@ -55,7 +56,7 @@
 /*-----hover-----*/
 .pets__item:hover .pets__item_poto {
   transform: scale(1.1);
-  //   opacity: 0.5;
+
   filter: brightness(50%);
 }
 .pets__item:hover .pets__item_name {
@@ -69,12 +70,6 @@
   color: #fff;
 }
 
-// .pets__item:hover .pets__item_info {
-//   background: #ccc;
-//   transition: all 0.3s linear;
-//   color: #e47209;
-// }
-
 /*-----hover-----*/
 .banan {
   padding-right: 11px;
@@ -86,12 +81,12 @@
 }
 
 .petswrapper {
-  position: relative;
   padding-top: 106px;
   height: 1213px;
 }
 .pets_btn {
   margin: 60px auto 0;
+  background: #fe9013;
 }
 .prew {
   background: white;
@@ -130,9 +125,11 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  z-index: -1;
 }
 .bottom-right {
   position: absolute;
   right: 0;
   bottom: 0;
+  z-index: -1;
 }

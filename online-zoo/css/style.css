@@ -2,10 +2,14 @@
 /*fonts*/
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 /* ----templates-----*/
-.pets__item_info, .backstagerow, .header_menu, .header-row, .headerwrapper, .header__logo {
+.friend__qntt, .footer__menu, .footer_title, .testimonials__items, .pick__items, .pets__item_info, .backstagerow, .header_menu, .header-row, .headerwrapper, .header__logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.activelabel {
+  color: #fe9013;
 }
 
 /*Обнуление*/
@@ -128,6 +132,7 @@ h6 {
   display: flex;
   justify-content: center;
   transition: all 0.3s ease;
+  padding-left: 5px;
 }
 
 .btn:hover {
@@ -135,6 +140,29 @@ h6 {
 }
 
 .btn:active {
+  background: #4b9200;
+}
+
+.btn-type-two {
+  width: 298px;
+  height: 54px;
+  left: calc(50% - 149px);
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 5px;
+  font-weight: 500;
+  margin-top: 27px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.btn-type-two:hover {
+  background: #e47209;
+}
+
+.btn-type-two:active {
   background: #4b9200;
 }
 
@@ -150,25 +178,45 @@ h6 {
   width: 82px;
   height: 52px;
   font-size: 19.0145px;
-  line-height: 120%;
+  line-height: 121%;
+  font-weight: 300;
   text-align: center;
   border: 1.18841px solid #ffffff;
   position: relative;
-  transition: all 0.3s linear;
+}
+.header__logo:hover {
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: #e47209;
+}
+.header__logo:hover .logo_icon {
+  background: url(../img/header/logo_hover.svg) no-repeat;
 }
 
 h1 {
   height: 44.91px;
+  letter-spacing: 0.2px;
 }
 
 .logo_icon {
+  background: url(../img/header/bamboo.svg) no-repeat;
   position: absolute;
   left: 8.53px;
-  bottom: 7.69px;
+  bottom: 5.69px;
+  width: 12px;
+  height: 21px;
+  display: block;
 }
 
-.orange {
+.navigation__link_active {
   color: #f9804b;
+  cursor: default;
+}
+
+.orange.navigation__link_active {
+  color: #f9804b;
+  pointer-events: none;
 }
 
 .headerwrapper {
@@ -182,6 +230,8 @@ h1 {
 .nav {
   margin-left: 63px;
   width: 472px;
+  font-weight: 300;
+  line-height: 140%;
 }
 
 .nav_link {
@@ -247,6 +297,7 @@ h1 {
 /*-----backstage------*/
 .backstage {
   height: 617px;
+  position: relative;
 }
 .backstage__textcontent {
   max-width: 465px;
@@ -291,7 +342,6 @@ h1 {
 }
 
 .backstagewrapper {
-  position: relative;
   padding-top: 140px;
 }
 
@@ -302,6 +352,9 @@ h1 {
 }
 
 /*-----pets------*/
+.pets {
+  position: relative;
+}
 .pets_name {
   font-weight: 500;
   font-size: 16px;
@@ -379,13 +432,13 @@ h1 {
 }
 
 .petswrapper {
-  position: relative;
   padding-top: 106px;
   height: 1213px;
 }
 
 .pets_btn {
   margin: 60px auto 0;
+  background: #fe9013;
 }
 
 .prew {
@@ -430,12 +483,14 @@ h1 {
   position: absolute;
   left: 0;
   bottom: 0;
+  z-index: -1;
 }
 
 .bottom-right {
   position: absolute;
   right: 0;
   bottom: 0;
+  z-index: -1;
 }
 
 /*-----pick------*/
@@ -462,23 +517,49 @@ h1 {
 .pick__warningifo {
   font-weight: 500;
   font-size: 16px;
-  line-height: 130%;
+  line-height: 132%;
   padding-left: calc(50% - 530.5px + 49.5px);
   top: 267px;
   color: #333b41;
   margin-bottom: 10px;
 }
 .pick__text {
-  width: 863px;
+  width: 970px;
   padding-left: calc(50% - 431.5px - 49.5px);
   font-size: 16px;
   line-height: 130%;
   color: #333b41;
   margin-bottom: 60px;
 }
+.pick__items {
+  padding-left: 17.0689655172%;
+  padding-right: 17.0689655172%;
+}
+.pick__item_icon {
+  width: 168px;
+  height: 168px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #f9804b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.pick__item_text {
+  width: 168px;
+  height: 46px;
+  line-height: 140%;
+  color: #333b41;
+}
+
+.pick__row_wrapper {
+  position: relative;
+}
+
 .pickwrapper {
   height: 835px;
-  width: 1150px;
+  width: 1160px;
   background: rgba(253, 253, 255, 0.52);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
@@ -487,10 +568,23 @@ h1 {
 }
 
 .pickifo__title {
-  padding-left: calc(50% - 104.5px - 0.5px);
+  text-align: center;
+  margin: 0 auto 40px;
   font-size: 36px;
   line-height: 130%;
   color: #333b41;
+}
+
+.arrow-one {
+  position: absolute;
+  left: 395px;
+  top: 60px;
+}
+
+.arrow-two {
+  position: absolute;
+  left: 693px;
+  top: 58px;
 }
 
 .donate {
@@ -505,4 +599,594 @@ h1 {
   background: #fe9013;
   position: absolute;
   left: 0;
+  bottom: -4px;
+}
+
+.pick_btn {
+  margin: 60px auto 0;
+}
+
+.correctionforitem {
+  padding-top: 5px;
+  padding-right: 1px;
+}
+
+/*-----testimonials------*/
+.testimonials__title {
+  font-size: 36px;
+  line-height: 130%;
+  text-align: center;
+  color: #333b41;
+  margin-bottom: 47px;
+}
+.testimonials__items {
+  margin-bottom: 15px;
+}
+.testimonials__item {
+  width: 268px;
+  height: 391px;
+  background: #f1f3f2;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%) border-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+}
+.testimonials__item_top {
+  display: flex;
+}
+.testimonials__item_icon {
+  background: #f1f3f2;
+  padding: 12px 10px 11px 15px;
+}
+.testimonials__item_userinfo {
+  background: #f1f3f2;
+  flex: 1 1 auto;
+}
+.testimonials__item_text {
+  background: #f1f3f2;
+  width: 100%;
+  height: 305px;
+  overflow: hidden;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  color: #767474;
+  padding: 0 13px 17px 14px;
+}
+
+.bottomblock {
+  height: 22px;
+  background: #f1f3f2;
+}
+
+.testimonialswrapper {
+  padding-top: 140px;
+  position: relative;
+  height: 919px;
+  width: 1160px;
+}
+
+.username {
+  padding-top: 13px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.location {
+  display: flex;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  color: #bdbdbd;
+}
+
+.dot {
+  margin: 0 5px 6px;
+}
+
+.testimonial_time {
+  padding-left: 3px;
+}
+
+.scrollfortes {
+  width: 599px;
+  height: 8px;
+  background: #f5f7f6;
+  border-radius: 5px;
+}
+
+/*-- стилизуется область, в которой находится ползунок и полоса слайдера, в ней также полоска ползунка находится---*/
+.testimonials_scroll input[type=range] {
+  -webkit-appearance: none !important; /* Скрывает слайдер, чтобы можно было создать свой */
+  height: 8px;
+  margin-left: 280px;
+}
+
+/*оформление полосы прокрутки Chrome*/
+.testimonials_scroll input[type=range]::-webkit-slider-runnable-track {
+  cursor: pointer;
+  background: #f5f7f6;
+  border-radius: 5px;
+  border: 0.5px solid transparent;
+  border: 0.5px solid rgba(254, 189, 171, 0.74);
+}
+
+/*оформление полосы прокрутки Firefox*/
+.testimonials_scroll input[type=range]::-moz-range-track {
+  cursor: pointer;
+  height: 8px;
+  background: #f5f7f6;
+  border-radius: 5px;
+  border: 0.5px solid transparent;
+  border: 0.5px solid rgba(254, 189, 171, 0.74);
+}
+
+/*--стилизация ползунка для Chrome--*/
+.testimonials_scroll input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: #fe9013;
+  width: 115.19px;
+  height: 6px;
+  border-radius: 5px;
+}
+
+/*--стилизация ползунка для Firefox--*/
+.testimonials_scroll input[type=range]::-moz-range-thumb {
+  background: #fe9013;
+  width: 115.19px;
+  height: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.leavfoto {
+  position: absolute;
+  right: 0;
+  top: 642.52px;
+  z-index: -1;
+}
+
+/*-----footer------*/
+.footer {
+  background: black;
+  color: #ffffff;
+}
+.footer_title {
+  position: relative;
+  border: 1.2px solid #ffffff;
+  border-radius: 2px;
+  font-weight: 300;
+  width: 82px;
+  height: 53px;
+  text-align: center;
+  font-size: 19.0145px;
+  line-height: 120%;
+}
+.footer__menu {
+  padding-left: 118px;
+}
+
+.footerwrapper {
+  width: 1160px;
+  padding-top: 39px;
+}
+
+.top-part {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscribe-part {
+  width: 366px;
+}
+.subscribe-part_title {
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 300;
+  margin-bottom: 14px;
+  letter-spacing: 0.1px;
+  padding-top: 1px;
+}
+.subscribe-part_submit {
+  display: flex;
+}
+
+.submit-email {
+  width: 129px;
+  height: 42px;
+  background: #f1f3f2;
+  border: 1px solid #333b41;
+  border-radius: 5px;
+  line-height: 140%;
+  color: #000000;
+  font-size: 16px;
+}
+
+.user-email-input {
+  background: #111115;
+  border-radius: 2px;
+  border: 0.5px solid #f9804b;
+  width: 228px;
+  height: 42px;
+  padding: 9px;
+  font-weight: 500;
+  color: #bdbdbd;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.footerbtn-type-two {
+  margin-top: 36px;
+  margin-bottom: 44px;
+}
+
+.bottom-footer-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 50px;
+}
+
+.social__container {
+  display: flex;
+  margin-bottom: 10px;
+}
+.social_icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(196, 196, 196, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+.social__item {
+  line-height: 130%;
+  align-self: end;
+  font-weight: 300;
+}
+
+.footer-nav_item {
+  margin: 9px 29px;
+  line-height: 140%;
+  font-weight: 300;
+}
+
+.disigned-by {
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 130%;
+  padding-bottom: 10px;
+}
+.disigned-by__school {
+  margin-top: 10px;
+}
+
+/*-----donate------*/
+.header-donate {
+  position: relative;
+}
+
+.logo_icon {
+  background: url(../img/header/bamboo.svg) no-repeat;
+}
+
+.panda-photo {
+  background: url(../img/donate/panda_bg.jpg) no-repeat center/cover;
+  height: 386px;
+}
+
+.lighttext {
+  font-weight: 400;
+  margin-right: 3px;
+}
+
+.friendrowtitle {
+  margin-right: 11px;
+  margin-bottom: 21px;
+}
+
+.friend {
+  height: 100%;
+  padding-top: 40px;
+}
+.friend__title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 130%;
+  color: #ffffff;
+  padding-right: 2px;
+  margin-bottom: 10px;
+}
+.friend__discription {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+}
+.friend__subtitle {
+  font-size: 36px;
+  line-height: 130%;
+  color: #fe9013;
+  margin: 44px 0 60px 0;
+  padding-top: 2px;
+}
+.friend__row {
+  height: 964px;
+}
+.friend__qntt {
+  padding-right: 321.51px;
+  padding-left: 307px;
+}
+.friend__all {
+  padding-top: 50px;
+}
+
+.friend__sub {
+  padding-left: calc(50% - 427.5px - 59.5px);
+  margin-bottom: 60px;
+}
+
+.friendwrapper {
+  max-width: 1160px;
+  width: 100%;
+  padding-bottom: 179px;
+}
+
+.number {
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 80%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 13px;
+}
+
+.mult {
+  padding-right: 52px;
+  padding-top: 27px;
+}
+
+.panda_widget {
+  position: relative;
+  top: -3px;
+}
+
+.donate-form {
+  padding-right: 92px;
+  padding-left: 92px;
+  margin-top: 46px;
+}
+
+.amount {
+  line-height: 140%;
+  color: #000000;
+  padding-left: 4px;
+  margin-bottom: 17px;
+}
+.amount_scroll {
+  position: relative;
+}
+
+/*-- стилизуется область, в которой находится ползунок и полоса слайдера, в ней также полоска ползунка находится---*/
+.amount_scroll input[type=range] {
+  -webkit-appearance: none !important; /* Скрывает слайдер для Chrome, чтобы можно было создать свой */
+  /* Указание параметра ширины требуется для Firefox. */
+  max-width: 976px;
+  width: 100%;
+  height: 27px;
+  background: #404950;
+  border-radius: 2px;
+  padding-right: 28px;
+  padding-left: 27px;
+}
+
+/* Стилизуем полоску слайдера, прописываем свои стили для Chrome*/
+.amount_scroll input[type=range]::-webkit-slider-runnable-track {
+  max-width: 915px;
+  width: 100%;
+  height: 2px;
+  border: none; /*- убирает бордер в полоске прокрутки ползунка--*/
+  background: #72828e;
+}
+
+/*оформление полосы прокрутки Firefox*/
+.amount_scroll input[type=range]::-moz-range-track {
+  max-width: 915px;
+  width: 100%;
+  height: 2px;
+  border: none; /*- убирает бордер в полоске прокрутки ползунка--*/
+  background: #72828e;
+}
+
+/* Специальные правила для браузеров на движках WebKit/Blink - Chrome*/
+.amount_scroll input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: #ffee2e;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: relative;
+  top: -4px;
+}
+
+.monthly-once input[type=range]:checked::after {
+  content: "";
+  background-color: blue;
+  margin: 0 10px 0 0;
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+}
+
+.monthly-once input[type=radio]:checked + label:before {
+  background: #4b9200;
+  border: none;
+}
+
+/*--стилизация ползунка для Firefox--*/
+.amount_scroll input[type=range]::-moz-range-thumb {
+  background: #ffee2e;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: relative;
+  top: -4px;
+}
+
+.moneyammount {
+  display: flex;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #333b41;
+  margin-top: 9px;
+  max-width: 952px;
+  width: 100%;
+}
+
+.thirdsum::before {
+  content: "";
+  display: inline-block;
+  background: url(../img/donate/orangemoney.svg) no-repeat left;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  margin-right: -9px;
+}
+
+.moneyitem::before {
+  content: "";
+  display: inline-block;
+  background: url(../img/donate/dollaricon.svg) no-repeat left;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  margin-right: -9px;
+}
+
+.firstsum {
+  margin-right: 61px;
+}
+
+.secondsum {
+  margin-right: 59px;
+}
+
+.thirdsum {
+  margin-right: 61px;
+}
+
+.fourthsum {
+  margin-right: 73px;
+}
+
+.fifthsum {
+  margin-right: 75px;
+}
+
+.sixthsum {
+  margin-right: 75px;
+}
+
+.seventhsun {
+  margin-right: 89px;
+}
+
+.moneyitem img {
+  position: absolute;
+  top: 7px;
+  left: -13px;
+}
+
+.anotheramount input[type=number] {
+  border: 1px solid #929699;
+  border-radius: 2px;
+  width: 266px;
+  height: 54px;
+  background: inherit;
+  padding-bottom: 3px;
+  padding-left: 7px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #929699;
+}
+
+/*-- убираем стрелки в поле инпут---*/
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*-----*/
+.anotheramount {
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+}
+
+.anotheramount label {
+  position: absolute;
+  left: 601px;
+  top: 15px;
+  font-size: 21px;
+}
+
+/*----стилизация радиокнопок-----*/
+.monthlyonce {
+  display: flex;
+  padding-left: 383px;
+  margin-top: 25px;
+}
+
+.monthly-once input[type=radio] {
+  display: none;
+}
+
+.monthly-once label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 0;
+  line-height: 18px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.monthly-once label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border: 1px solid #fe9013;
+  border-radius: 50%;
+}
+
+/* Checked */
+.monthly-once input[type=radio]:checked + label:before {
+  background: #4b9200;
+  border: none;
+}
+
+.monthly-once {
+  margin-right: 51px;
+}
+
+.donatebtn {
+  margin: 33px auto 0;
+  padding-left: 9px;
 }

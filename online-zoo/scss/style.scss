@@ -9,6 +9,10 @@
   justify-content: space-between;
 }
 
+.activelabel {
+  color: #fe9013;
+}
+
 // Файл обнуляющих стилей
 @import "_nullstyle";
 
@@ -30,7 +34,7 @@
 .btn {
   width: 298px;
   height: 54px;
-  background: #fe9013; //linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  background: #fe9013;
   border-radius: 25px;
   font-size: 16px;
   line-height: 140%;
@@ -41,6 +45,7 @@
   display: flex;
   justify-content: center;
   transition: all 0.3s ease;
+  padding-left: 5px;
 }
 .btn:hover {
   background: #e47209;
@@ -48,6 +53,28 @@
 .btn:active {
   background: #4b9200;
 }
+
+.btn-type-two {
+  width: 298px;
+  height: 54px;
+  left: calc(50% - 298px / 2);
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 5px;
+  font-weight: 500;
+  margin-top: 27px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 16px;
+}
+.btn-type-two:hover {
+  background: #e47209;
+}
+.btn-type-two:active {
+  background: #4b9200;
+}
+
 /*-----------header------*/
 @import "_header";
 
@@ -62,3 +89,12 @@
 
 /*-----pick------*/
 @import "_pick";
+
+/*-----testimonials------*/
+@import "_testimonials";
+
+/*-----footer------*/
+@import "_footer";
+
+/*-----donate------*/
+@import "_donate";
