@@ -102,6 +102,15 @@
     font-weight: 300;
   }
 }
+.social__container:active {
+  color: #4b9200;
+  .social_icon {
+    background: #4b9200;
+  }
+}
+// .social_icon:active {
+//   background: #4b9200;
+// }
 
 .footer-nav {
   &_item {

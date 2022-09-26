@@ -852,6 +852,13 @@ h1 {
   font-weight: 300;
 }
 
+.social__container:active {
+  color: #4b9200;
+}
+.social__container:active .social_icon {
+  background: #4b9200;
+}
+
 .footer-nav_item {
   margin: 9px 29px;
   line-height: 140%;
