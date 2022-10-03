@@ -1,7 +1,12 @@
-@media (max-width: 892.98px) {
+@media (max-width: 895px) {
   .cheetahs,
   .penguin {
     display: none;
+  }
+
+  .pets__items {
+    max-width: 700px;
+    row-gap: 47px;
   }
 }
 

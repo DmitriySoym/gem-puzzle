@@ -1704,10 +1704,14 @@ input[type=number] {
   }
 }
 /*---media---*/
-@media (max-width: 892.98px) {
+@media (max-width: 895px) {
   .cheetahs,
 .penguin {
     display: none;
+  }
+  .pets__items {
+    max-width: 700px;
+    row-gap: 47px;
   }
 }
 @media (max-width: 992.98px) {
@@ -2292,6 +2296,7 @@ input[type=number] {
   .pets__items {
     row-gap: 20px;
     justify-content: center;
+    max-width: 500px;
   }
   .pets_btn {
     margin-top: 608px;
