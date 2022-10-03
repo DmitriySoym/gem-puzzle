@@ -2499,6 +2499,7 @@ input[type=number] {
   .friend__qntt {
     padding: 0;
     width: 100%;
+    justify-content: center;
   }
   .friend__all {
     padding: 0;
@@ -2518,6 +2519,7 @@ input[type=number] {
   .mult {
     padding-right: 28.9px;
     padding-top: 30px;
+    margin: 0 6px;
   }
   .mult img {
     width: 7.89px;
