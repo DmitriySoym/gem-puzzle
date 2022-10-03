@@ -4,6 +4,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 10;
   &__logo {
     width: 82px;
     height: 52px;
@@ -14,7 +15,6 @@
     text-align: center;
     border: 1.18841px solid #ffffff;
     position: relative;
-    //  transition: all 0.3s linear;
   }
 
   &__logo:hover {
@@ -92,4 +92,8 @@ h1 {
 }
 .designedby:hover {
   color: #f9804b;
+}
+
+.burgermenu {
+  display: none;
 }

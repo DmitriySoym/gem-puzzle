@@ -62,7 +62,7 @@
 
   &__items {
     @extend %flexforitem;
-    //  padding: 0 198px;
+
     padding-left: calc(198 / 1160 * 100%);
     padding-right: calc(198 / 1160 * 100%);
   }
@@ -91,6 +91,7 @@
 .pick__row_wrapper {
   position: relative;
 }
+
 .pickwrapper {
   height: 835px;
   width: 1160px;
@@ -99,6 +100,7 @@
   border-radius: 20px;
   padding-top: 41px;
 }
+
 .pickifo {
   &__title {
     text-align: center;
@@ -108,19 +110,23 @@
     color: #333b41;
   }
 }
+
 .arrow-one {
   position: absolute;
   left: 395px;
   top: 60px;
 }
+
 .arrow-two {
   position: absolute;
   left: 693px;
   top: 58px;
 }
+
 .donate {
   position: relative;
 }
+
 .donate::after {
   content: "";
   display: block;
@@ -138,4 +144,9 @@
 .correctionforitem {
   padding-top: 5px;
   padding-right: 1px;
+}
+
+.greenarrow1,
+.greenarrow2 {
+  display: none;
 }
