@@ -134,6 +134,7 @@
   background: #72828e;
   z-index: -1;
 }
+
 .amount_price {
   display: flex;
   position: relative;
@@ -142,6 +143,7 @@
   top: -3px;
   left: -2px;
 }
+
 .amount_price::after {
   content: "";
   position: absolute;
@@ -153,12 +155,19 @@
   z-index: -1;
   transform: translateY(-50%);
 }
+
 .a_P {
   margin-right: 120px;
   list-style: none;
 }
+
 .a_P:last-child {
   margin-right: 0px;
+}
+
+.little-dollar {
+  left: 0px;
+  font-size: 22px;
 }
 
 .radbut {
@@ -211,18 +220,23 @@
   border-radius: 50%;
   transition: 0.3s;
 }
+
 .radbut:hover .circle-s {
   transform: translate(-50%, -50%) scale(1);
 }
+
 .radbut input:checked ~ .circle-l {
   transform: translate(-50%, -50%) scale(1);
 }
+
 .radbut input:checked ~ .circle-s {
   transform: translate(-50%, -50%) scale(1);
 }
+
 .radbut input:checked ~ .moneys {
   color: #fe9013;
 }
+
 .moneys {
   position: relative;
   font-weight: 500;
