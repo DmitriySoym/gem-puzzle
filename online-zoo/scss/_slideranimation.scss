@@ -1,0 +1,13 @@
+.transition-right {
+  animation-name: circle;
+  animation-duration: 1s;
+}
+
+@keyframes circle {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 1280px;
+  }
+}

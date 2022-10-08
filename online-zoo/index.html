@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header id="header" class="header">
         <div class="container">
           <div class="headerwrapper">
             <div class="header-row">
@@ -40,17 +40,21 @@
                 </ul>
               </nav>
             </div>
+
             <a
               href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online?node-id=0%3A1"
             >
               <div class="designedby">Designed by ©</div>
             </a>
+
             <div class="burgermenu">
               <span class="burgermenu_toggle"></span>
             </div>
           </div>
+          <div class="burgermenu-back"></div>
         </div>
       </header>
+
       <main>
         <section class="watchonline">
           <div class="container watchonlinewrapper">
@@ -65,6 +69,7 @@
             </div>
           </div>
         </section>
+
         <section class="backstage">
           <div class="container backstagewrapper">
             <div class="backstagerow">
@@ -101,6 +106,7 @@
             </div>
           </div>
         </section>
+
         <section class="pets">
           <div class="container petswrapper">
             <div class="pets__items">
@@ -118,6 +124,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="pets__item">
                 <div class="pets__item_poto">
                   <img src="./img/pets/pets_photo/eagles.jpg" alt="eagles" />
@@ -132,6 +139,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="pets__item gorilla">
                 <div class="pets__item_poto">
                   <img src="./img/pets/pets_photo/gorillas.jpg" alt="gorilas" />
@@ -146,6 +154,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="pets__item sloth">
                 <div class="pets__item_poto">
                   <img src="./img/pets/pets_photo/sloths.svg" alt="sloths" />
@@ -160,6 +169,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="pets__item cheetahs">
                 <div class="pets__item_poto">
                   <img
@@ -177,6 +187,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="pets__item aligator">
                 <div class="pets__item_poto">
                   <img
@@ -194,6 +205,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="pets__item penguin">
                 <div class="pets__item_poto">
                   <img
@@ -241,6 +253,7 @@
             </div>
           </div>
         </section>
+
         <section class="pick">
           <div class="container pickwrapper">
             <div class="pick__row">
@@ -308,41 +321,44 @@
             </div>
           </div>
         </section>
+
         <section class="testimonials">
           <div class="container testimonialswrapper">
             <h2 class="testimonials__title">Testimonials</h2>
             <div class="testimonials__items">
-              <div class="testimonials__item">
-                <div class="testimonials__item_top">
-                  <div class="testimonials__item_icon">
-                    <img
-                      src="./img/testimonials/user_icon.svg"
-                      alt="user-icon"
-                    />
-                  </div>
-                  <div class="testimonials__item_userinfo">
-                    <div class="username">Michael John</div>
-                    <div class="location">
-                      <div class="user_country">Local Austria</div>
-                      <div class="dot">•</div>
-                      <div class="testimonial_time">Today</div>
+              <a href="#popup" class="popup-link">
+                <div class="testimonials__item">
+                  <div class="testimonials__item_top">
+                    <div class="testimonials__item_icon">
+                      <img
+                        src="./img/testimonials/user_icon.svg"
+                        alt="user-icon"
+                      />
+                    </div>
+                    <div class="testimonials__item_userinfo">
+                      <div class="username">Michael John</div>
+                      <div class="location">
+                        <div class="user_country">Local Austria</div>
+                        <div class="dot">•</div>
+                        <div class="testimonial_time">Today</div>
+                      </div>
                     </div>
                   </div>
+                  <div class="testimonials__item_text">
+                    The best online zoo I’ve met. My son delighted very much
+                    ljves to watch gouillas. Online zoo is one jf the ways to
+                    instill a love for animals.The best online zoo I’ve met. My
+                    son delighted very much ljves to watch gouillas. Online zoo
+                    is one jf the ways to instill a love for animals.<br />
+                    The best online zoo I’ve met. My son delighted very much
+                    ljves to watch gouillas. Online zoo is one jf the ways to
+                    instill a love for animals.The best online zoo I’ve met. My
+                    son delighted very much ljves to watch gouillas. Online zoo
+                    is one jf the ways to instill a love for animals.
+                  </div>
+                  <div class="bottomblock"></div>
                 </div>
-                <div class="testimonials__item_text">
-                  The best online zoo I’ve met. My son delighted very much ljves
-                  to watch gouillas. Online zoo is one jf the ways to instill a
-                  love for animals.The best online zoo I’ve met. My son
-                  delighted very much ljves to watch gouillas. Online zoo is one
-                  jf the ways to instill a love for animals.<br />
-                  The best online zoo I’ve met. My son delighted very much ljves
-                  to watch gouillas. Online zoo is one jf the ways to instill a
-                  love for animals.The best online zoo I’ve met. My son
-                  delighted very much ljves to watch gouillas. Online zoo is one
-                  jf the ways to instill a love for animals.
-                </div>
-                <div class="bottomblock"></div>
-              </div>
+              </a>
               <div class="testimonials__item oskar">
                 <div class="testimonials__item_top">
                   <div class="testimonials__item_icon">
@@ -464,6 +480,7 @@
           </div>
         </section>
       </main>
+
       <footer class="footer">
         <div class="container footerwrapper">
           <div class="top-part">
@@ -558,6 +575,19 @@
           </div>
         </div>
       </footer>
+
+      <!-- <div id="popup" class="popup">
+        <div class="popup__body">
+          <div class="popup__content">
+            <a href="#header" class="popup__close close-popup"
+              ><img src="./img/popup/popup_x_icon.svg" alt="x"
+            /></a>
+            <div class="popup__text">This is modal window</div>
+          </div>
+        </div>
+      </div> -->
+
+      <script src="./js/script.js"></script>
     </div>
   </body>
 </html>

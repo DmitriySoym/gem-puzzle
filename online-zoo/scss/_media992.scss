@@ -19,7 +19,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 100;
 
     &__logo {
       width: 46.86px;
@@ -50,7 +50,7 @@
     position: absolute;
     top: 11px;
     right: 20px;
-    z-index: 1;
+    z-index: 10;
 
     &_toggle {
       width: 100%;
@@ -613,5 +613,50 @@
   .donatelogo_icon {
     top: 16px;
     left: 7px;
+  }
+
+  /*-- popup  --*/
+
+  .popup {
+    position: fixed;
+    top: 34px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 16, 16, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__body {
+      width: 100%;
+      min-height: 428px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 10px;
+      background: #f5f7f6;
+    }
+
+    &__content {
+      background: #f5f7f6;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__close {
+      position: absolute;
+      top: 12px;
+      right: 10px;
+    }
+
+    &__text {
+    }
   }
 }

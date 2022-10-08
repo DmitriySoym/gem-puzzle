@@ -78,6 +78,10 @@
   background: #4b9200;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 /*-----------header------*/
 @import "_header";
 
@@ -110,3 +114,9 @@
 
 /*---media---*/
 @import "_media639";
+
+/*---media---*/
+@import "_menuburger";
+
+/*---slider animation---*/
+@import "_slideranimation";
