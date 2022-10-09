@@ -108,9 +108,6 @@
     background: #4b9200;
   }
 }
-// .social_icon:active {
-//   background: #4b9200;
-// }
 
 .footer-nav {
   &_item {
@@ -129,4 +126,8 @@
   &__school {
     margin-top: 10px;
   }
+}
+
+.popup {
+  display: none;
 }

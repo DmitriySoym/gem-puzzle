@@ -143,19 +143,6 @@
 
   .aligator {
     display: block;
-    order: 3;
-  }
-
-  .penguin {
-    order: 4;
-  }
-
-  .gorilla {
-    order: 2;
-  }
-
-  .cheetahs {
-    order: 1;
   }
 
   .bottom-right {
@@ -251,11 +238,16 @@
     height: 840px;
   }
 
-  .oskar {
-    display: none;
+  .testimonials-container {
+    width: 940px;
+    margin: 0 auto;
   }
 
   .testimonials {
+    &__items {
+      width: 3523px;
+    }
+
     &__title {
       margin-bottom: 30px;
     }
@@ -271,14 +263,6 @@
     &_scroll input[type="range"]::-webkit-slider-thumb {
       width: 75px;
     }
-  }
-
-  .federicka {
-    order: 2;
-  }
-
-  .mila {
-    order: 1;
   }
 
   .scrollfortes {
