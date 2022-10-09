@@ -62,6 +62,7 @@
             <h3 class="friend__title">
               THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!
             </h3>
+
             <div class="friend__discription">
               Even though the Zoo has been able to reopen, we are at a greatly
               reduced capacity with educational programs and public and private
@@ -75,7 +76,9 @@
               Please consider a gift today – no matter what size – to help us
               sustain our mission.
             </div>
+
             <h3 class="friend__subtitle">Donation Information</h3>
+
             <div class="friend__row pickwrapper">
               <h2 class="pick__title friendrowtitle">Pick and feed a friend</h2>
               <div class="pick__subtitle friend__sub">
@@ -100,7 +103,7 @@
                   <ul class="amount_price">
                     <li class="a_P kk">
                       <label class="radbut">
-                        <input type="radio" name="donate_amount" />
+                        <input type="radio" name="donate_amount" value="5000" />
                         <div class="moneys">
                           <span><span class="little-dollar">$</span>5000</span>
                         </div>
@@ -110,7 +113,7 @@
                     </li>
                     <li class="a_P secondamount">
                       <label class="radbut">
-                        <input type="radio" name="donate_amount" />
+                        <input type="radio" name="donate_amount" value="2000" />
                         <div class="moneys">
                           <span><span class="little-dollar">$</span>2000</span>
                         </div>
@@ -120,7 +123,7 @@
                     </li>
                     <li class="a_P thirdamount">
                       <label class="radbut">
-                        <input type="radio" name="donate_amount" />
+                        <input type="radio" name="donate_amount" value="1000" />
                         <div class="moneys">
                           <span><span class="little-dollar">$</span>1000</span>
                         </div>
@@ -130,7 +133,7 @@
                     </li>
                     <li class="a_P">
                       <label class="radbut">
-                        <input type="radio" name="donate_amount" />
+                        <input type="radio" name="donate_amount" value="500" />
                         <div class="moneys">
                           <span><span class="little-dollar">$</span>500</span>
                         </div>
@@ -140,7 +143,7 @@
                     </li>
                     <li class="a_P">
                       <label class="radbut">
-                        <input type="radio" name="donate_amount" />
+                        <input type="radio" name="donate_amount" value="250" />
                         <div class="moneys">
                           <span><span class="little-dollar">$</span>250</span>
                         </div>
@@ -150,7 +153,12 @@
                     </li>
                     <li class="a_P">
                       <label class="radbut">
-                        <input type="radio" name="donate_amount" />
+                        <input
+                          type="radio"
+                          name="donate_amount"
+                          value="100"
+                          checked
+                        />
                         <div class="moneys">
                           <span><span class="little-dollar">$</span>100</span>
                         </div>
@@ -160,7 +168,7 @@
                     </li>
                     <li class="a_P">
                       <label class="radbut">
-                        <input type="radio" name="donate_amount" />
+                        <input type="radio" name="donate_amount" value="50" />
                         <div class="moneys">
                           <span><span class="little-dollar">$</span>50</span>
                         </div>
@@ -170,7 +178,7 @@
                     </li>
                     <li class="a_P">
                       <label class="radbut">
-                        <input type="radio" name="donate_amount" />
+                        <input type="radio" name="donate_amount" value="25" />
                         <div class="moneys">
                           <span><span class="little-dollar">$</span>25</span>
                         </div>
@@ -185,7 +193,8 @@
                     class="moneysum"
                     type="number"
                     placeholder="Another amount"
-                    onkeypress="this.value=this.value.substring(0,3);"
+                    oninput="if (value.length> 4) value = value.slice (0,4)"
+                    onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)));"
                   />
                   <label for="moneysum">$</label>
                 </div>
@@ -316,7 +325,7 @@
         </div>
       </footer>
 
-      <script src="../js/script.js"></script>
+      <script src="../js/scriptdonate.js"></script>
     </div>
   </body>
 </html>

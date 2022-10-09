@@ -327,6 +327,11 @@
   color: #929699;
 }
 
+.anotheramount input[type="number"]:focus {
+  border: 1px solid #4b9200;
+  color: #4b9200;
+}
+
 /*-- убираем стрелки в поле инпут---*/
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;

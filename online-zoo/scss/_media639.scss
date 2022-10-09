@@ -114,6 +114,10 @@
     height: 1522px;
   }
 
+  .corusel-container {
+    height: 1394px;
+  }
+
   .pets {
     &__items {
       row-gap: 20px;
@@ -122,8 +126,7 @@
     }
 
     &_btn {
-      margin-top: 608px;
-      margin-left: -7px;
+      // margin-left: -7px;
     }
 
     &_name {
@@ -235,6 +238,10 @@
   }
 
   .testimonials {
+    &__items {
+      width: 100%;
+    }
+
     &__title {
       font-size: 24px;
       line-height: 120%;
@@ -242,6 +249,7 @@
     }
 
     &__item {
+      max-width: 300px;
       width: 100%;
 
       &_icon {
@@ -263,7 +271,7 @@
   }
 
   .btn-typetwo {
-    margin: 14px auto 0;
+    margin: 29px auto 0;
   }
 
   .leavfoto {

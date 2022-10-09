@@ -1,13 +1,62 @@
-.transition-right {
-  animation-name: circle;
-  animation-duration: 1s;
+.corusel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-@keyframes circle {
+.pets__items {
+  display: none;
+  animation: 0.5s ease-in-out;
+}
+
+.pets__items.activeslide {
+  display: flex;
+}
+
+.activeslide,
+.nextslide {
+  display: flex;
+}
+
+.nextslide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  animation-name: left;
+  //   animation-direction: reverse;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
   from {
     left: 0px;
   }
   to {
-    left: 1280px;
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
   }
 }

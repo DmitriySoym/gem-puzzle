@@ -171,6 +171,11 @@ body.lock {
   overflow: hidden;
 }
 
+.corusel {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
 /*-----------header------*/
 .header {
   background: #111115;
@@ -390,6 +395,7 @@ h1 {
   width: 100%;
   height: 891px;
   margin: 0 auto;
+  position: relative;
 }
 .pets__item {
   overflow: hidden;
@@ -651,6 +657,9 @@ h1 {
 }
 .testimonials__items {
   margin-bottom: 15px;
+  width: 3240px;
+  position: relative;
+  transition: all 0.4s linear;
 }
 .testimonials__item {
   width: 268px;
@@ -659,6 +668,7 @@ h1 {
   border-radius: 20px;
   overflow: hidden;
   border: 2px solid transparent;
+  pointer-events: none;
   background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%) border-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
 }
 .testimonials__item_top {
@@ -682,6 +692,11 @@ h1 {
   line-height: 120%;
   color: #767474;
   padding: 0 13px 17px 14px;
+}
+
+.testimonials-container {
+  width: 100%;
+  overflow: hidden;
 }
 
 .bottomblock {
@@ -1241,6 +1256,11 @@ h1 {
   color: #929699;
 }
 
+.anotheramount input[type=number]:focus {
+  border: 1px solid #4b9200;
+  color: #4b9200;
+}
+
 /*-- убираем стрелки в поле инпут---*/
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -1465,16 +1485,6 @@ input[type=number] {
   }
   .aligator {
     display: block;
-    order: 3;
-  }
-  .penguin {
-    order: 4;
-  }
-  .gorilla {
-    order: 2;
-  }
-  .cheetahs {
-    order: 1;
   }
   .bottom-right {
     width: 241px;
@@ -1550,8 +1560,12 @@ input[type=number] {
     width: 100%;
     height: 840px;
   }
-  .oskar {
-    display: none;
+  .testimonials-container {
+    width: 940px;
+    margin: 0 auto;
+  }
+  .testimonials__items {
+    width: 3523px;
   }
   .testimonials__title {
     margin-bottom: 30px;
@@ -1564,12 +1578,6 @@ input[type=number] {
   }
   .testimonials_scroll input[type=range]::-webkit-slider-thumb {
     width: 75px;
-  }
-  .federicka {
-    order: 2;
-  }
-  .mila {
-    order: 1;
   }
   .scrollfortes {
     width: 390px;
@@ -1870,12 +1878,12 @@ input[type=number] {
     z-index: -1;
   }
   /*-----pets------*/
+  .corusel {
+    max-width: 700px;
+  }
   .petswrapper {
     padding: 0 20px;
     height: 970px;
-  }
-  .pets__items {
-    row-gap: 47px;
   }
   .pets_btn {
     margin-top: 15px;
@@ -1998,9 +2006,16 @@ input[type=number] {
     padding-right: unset;
     height: 666px;
   }
+  .testimonials-container {
+    width: 100%;
+    height: 357px;
+  }
   .testimonials__items {
     flex-direction: column;
     margin-bottom: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    position: unset;
   }
   .testimonials__title {
     padding-right: 2px;
@@ -2009,6 +2024,7 @@ input[type=number] {
     width: 600px;
     height: 109px;
     margin-bottom: 14px;
+    pointer-events: unset;
   }
   .testimonials__item_icon {
     padding: 11px 10px 7px 15px;
@@ -2032,7 +2048,7 @@ input[type=number] {
     padding-top: 12px;
   }
   .btn-typetwo {
-    margin: 24px auto 0;
+    margin: 39px auto 0;
     display: block;
     width: 239px;
     font-weight: 400;
@@ -2224,11 +2240,13 @@ input[type=number] {
     background: rgba(16, 16, 16, 0.6);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease 0s;
+    transition: all 0.2s ease 0s;
   }
   .popup.open {
     opacity: 1;
     visibility: visible;
+    z-index: 2;
+    transition: all 0.3s linear;
   }
   .popup__body {
     width: 100%;
@@ -2238,6 +2256,7 @@ input[type=number] {
     justify-content: center;
     padding: 30px 10px;
     background: #f5f7f6;
+    margin: 0 auto;
   }
   .popup__content {
     background: #f5f7f6;
@@ -2248,6 +2267,21 @@ input[type=number] {
     position: absolute;
     top: 12px;
     right: 10px;
+  }
+  .testimonials__item.open {
+    z-index: 3;
+    position: fixed;
+    width: 267px;
+    height: 391px;
+    left: calc(50% - 133.5px - 9.5px);
+    top: 50px;
+  }
+  .testimonials__item.open .testimonials__item_text {
+    height: 312px;
+  }
+  body.popup.open {
+    height: 100vh;
+    overflow-y: hidden;
   }
 }
 /*---media---*/
@@ -2341,14 +2375,13 @@ input[type=number] {
     padding: 0 17px;
     height: 1522px;
   }
+  .corusel-container {
+    height: 1394px;
+  }
   .pets__items {
     row-gap: 20px;
     justify-content: center;
     max-width: 500px;
-  }
-  .pets_btn {
-    margin-top: 608px;
-    margin-left: -7px;
   }
   .pets_name {
     left: -37px;
@@ -2432,12 +2465,16 @@ input[type=number] {
     height: 580px;
     padding: 31px 10px 0;
   }
+  .testimonials__items {
+    width: 100%;
+  }
   .testimonials__title {
     font-size: 24px;
     line-height: 120%;
     margin-bottom: 21px;
   }
   .testimonials__item {
+    max-width: 300px;
     width: 100%;
   }
   .testimonials__item_icon {
@@ -2453,7 +2490,7 @@ input[type=number] {
     margin: 0 3px 7px;
   }
   .btn-typetwo {
-    margin: 14px auto 0;
+    margin: 29px auto 0;
   }
   .leavfoto {
     transform: scale(0.3) rotate(-13deg);
@@ -2748,27 +2785,85 @@ input[type=number] {
   }
 }
 /*---slider animation---*/
-.transition-right {
-  -webkit-animation-name: circle;
-          animation-name: circle;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+.corusel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-@-webkit-keyframes circle {
+.pets__items {
+  display: none;
+  -webkit-animation: 0.5s ease-in-out;
+          animation: 0.5s ease-in-out;
+}
+
+.pets__items.activeslide {
+  display: flex;
+}
+
+.activeslide,
+.nextslide {
+  display: flex;
+}
+
+.nextslide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+}
+
+.from-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+}
+
+.to-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes left {
   from {
     left: 0px;
   }
   to {
-    left: 1280px;
+    left: -100%;
   }
 }
 
-@keyframes circle {
+@keyframes left {
   from {
     left: 0px;
   }
   to {
-    left: 1280px;
+    left: -100%;
+  }
+}
+@-webkit-keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
   }
 }
