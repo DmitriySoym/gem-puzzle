@@ -100,7 +100,8 @@ const btnright = document
   });
 
 const slideItem = document.querySelectorAll(".slideitem");
-console.log(slideItem);
+console.log(slideItem[1].firstChild);
+console.log(slideItem[1].children[1]);
 
 /*------testimonials slider-----*/
 
@@ -109,7 +110,7 @@ const testimonialsslide = document.querySelector(".scrollfortes");
 const testimonials = document.querySelector(".testimonials__items");
 
 function slidingTestimonials() {
-  if (window.matchMedia("(min-width: 1440px)").matches) {
+  if (window.matchMedia("(min-width: 1179px)").matches) {
     switch (testimonialsslide.value) {
       case "0":
         testimonials.style.left = "0";
