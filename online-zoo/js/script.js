@@ -88,7 +88,35 @@ const btnleft = document
       previousItem(currentItem);
     }
     changeCurrentItem(currentItem);
+    changeOrderLeft();
   });
+
+const firstBlock = document.querySelector(".firstblock");
+const secondBlock = document.querySelector(".secondblock");
+const thirdBlock = document.querySelector(".thirdblock");
+
+function changeOrderLeft() {
+  let firstel = firstBlock.children[0];
+  let secondel = firstBlock.children[1];
+  let thirdel = firstBlock.children[2];
+
+  secondel.before(thirdel);
+  firstBlock.append(firstel);
+
+  let firstelSecond = secondBlock.children[0];
+  let secondesecondl = secondBlock.children[1];
+  let thirdelSecond = secondBlock.children[2];
+
+  secondesecondl.before(thirdelSecond);
+  secondBlock.append(firstelSecond);
+
+  let firstelthird = thirdBlock.children[0];
+  let secondethird = thirdBlock.children[1];
+  let thirdelthird = thirdBlock.children[2];
+
+  secondethird.before(thirdelthird);
+  thirdBlock.append(firstelthird);
+}
 
 const btnright = document
   .querySelector(".next")
@@ -97,12 +125,28 @@ const btnright = document
       nextItem(currentItem);
     }
     changeCurrentItem(currentItem);
+    changeOrderRight();
   });
 
-const slideItem = document.querySelectorAll(".slideitem");
-console.log(slideItem[1].firstChild);
-console.log(slideItem[1].children[1]);
+function changeOrderRight() {
+  let firstel = firstBlock.children[0];
+  let secondel = firstBlock.children[1];
+  let thirdel = firstBlock.children[2];
 
+  secondel.before(thirdel);
+  firstBlock.append(firstel);
+
+  let firstelSecond = secondBlock.children[0];
+  let secondesecondl = secondBlock.children[1];
+  let thirdelSecond = secondBlock.children[2];
+
+  secondesecondl.before(thirdelSecond);
+  secondBlock.append(firstelSecond);
+
+  let firstelthird = thirdBlock.children[0];
+  let secondethird = thirdBlock.children[1];
+  let thirdelthird = thirdBlock.children[2];
+}
 /*------testimonials slider-----*/
 
 const testimonialsslide = document.querySelector(".scrollfortes");
