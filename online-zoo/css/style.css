@@ -422,8 +422,12 @@ h1 {
   position: relative;
 }
 
-.aligator {
-  display: none;
+.aligator .pets__item_poto img {
+  width: 364px;
+}
+
+.makaka .pets__item_poto img {
+  width: 364px;
 }
 
 .smalldesktop-leaf {
@@ -1480,9 +1484,6 @@ input[type=number] {
     padding-right: 12px;
     padding-bottom: 2px;
   }
-  .sloth {
-    display: none;
-  }
   .aligator {
     display: block;
   }
@@ -1725,8 +1726,19 @@ input[type=number] {
 }
 /*---media---*/
 @media (max-width: 895px) {
-  .cheetahs,
-.penguin {
+  .secondblock .aligator {
+    display: none;
+  }
+  .secondblock .sloth {
+    display: none;
+  }
+  .firstblock .gorilla {
+    display: none;
+  }
+  .thirdblock .eagle {
+    display: none;
+  }
+  .penguin {
     display: none;
   }
   .pets__items {
@@ -1884,6 +1896,9 @@ input[type=number] {
   .petswrapper {
     padding: 0 20px;
     height: 970px;
+  }
+  .aligator .pets__item_poto img {
+    width: 285.24px;
   }
   .pets_btn {
     margin-top: 15px;

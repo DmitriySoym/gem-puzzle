@@ -1,5 +1,20 @@
 @media (max-width: 895px) {
-  .cheetahs,
+  .secondblock .aligator {
+    display: none;
+  }
+
+  .secondblock .sloth {
+    display: none;
+  }
+
+  .firstblock .gorilla {
+    display: none;
+  }
+
+  .thirdblock .eagle {
+    display: none;
+  }
+
   .penguin {
     display: none;
   }
@@ -190,6 +205,10 @@
   .petswrapper {
     padding: 0 20px;
     height: 970px;
+  }
+
+  .aligator .pets__item_poto img {
+    width: 285.24px;
   }
 
   .pets {
@@ -680,9 +699,4 @@
       height: 312px;
     }
   }
-
-  //   body.popup.open {
-  //     height: 100vh;
-  //     overflow-y: hidden;
-  //   }
 }
