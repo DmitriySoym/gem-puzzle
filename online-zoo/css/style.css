@@ -695,7 +695,7 @@ h1 {
 }
 
 .testimonials-container {
-  width: 100%;
+  width: 1160px;
   overflow: hidden;
 }
 
@@ -2278,10 +2278,6 @@ input[type=number] {
   }
   .testimonials__item.open .testimonials__item_text {
     height: 312px;
-  }
-  body.popup.open {
-    height: 100vh;
-    overflow-y: hidden;
   }
 }
 /*---media---*/

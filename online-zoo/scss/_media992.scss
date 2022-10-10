@@ -193,10 +193,6 @@
   }
 
   .pets {
-    &__items {
-      // row-gap: 47px;
-    }
-
     &_btn {
       margin-top: 15px;
     }
@@ -685,8 +681,8 @@
     }
   }
 
-  body.popup.open {
-    height: 100vh;
-    overflow-y: hidden;
-  }
+  //   body.popup.open {
+  //     height: 100vh;
+  //     overflow-y: hidden;
+  //   }
 }
