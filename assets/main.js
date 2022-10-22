@@ -78,6 +78,9 @@ winningButton.textContent = "Ok";
 winningButton.classList.add("button");
 winningButton.addEventListener("click", () => {
   winning.classList.toggle("visible");
+  //   document.querySelectorAll(".myRecords").forEach((e) => e.remove());
+
+  //   bestResultRender();
 });
 winning.append(winningButton);
 
@@ -736,36 +739,38 @@ buttonFameClose.addEventListener("click", () => {
   bestRes.classList.toggle("visible");
 });
 
+// bestResultRender();
+
 function showbestRes() {
   bestRes.classList.toggle("visible");
+  document.querySelectorAll(".myRecords").forEach((e) => e.remove());
   if (bestRes.classList.contains("visible")) {
     playSound("fame");
+  }
 
-    if (localStorage.getItem("fame")) {
-      let fame = localStorage.getItem("fame");
-      fame = JSON.parse(fame);
+  if (localStorage.getItem("fame")) {
+    let fames = localStorage.getItem("fame");
+    fames = JSON.parse(fames);
 
-      const { children } = bestRes;
-      console.log({ children }.children);
-      console.log(fame);
+    const { children } = bestRes;
 
-      for (let k = 0; k < fame.length; k += 1) {
-        for (let i = 0; i < children.length; i += 1) {
-          if (fame[k].sizeX === Number(children[i].getAttribute("value"))) {
-            const el = document.createElement("div");
+    for (let k = 0; k < fames.length; k += 1) {
+      for (let i = 0; i < children.length; i += 1) {
+        if (fames[k].sizeX === Number(children[i].getAttribute("value"))) {
+          const el = document.createElement("div");
+          el.classList.add("myRecords");
 
-            el.innerHTML = `
-                           name = ${fame[k].name}, time = ${fame[k].timeString}, moves = ${fame[k].moves}
+          el.innerHTML = `
+                           name = ${fames[k].name}, time = ${fames[k].timeString}, moves = ${fames[k].moves}
                         `;
 
-            children[i].appendChild(el);
-            console.log(el);
+          children[i].appendChild(el);
+          console.log(el);
 
-            const delete_records = document.querySelector(".delete_records");
-            delete_records.onclick = () => {
-              el.remove();
-            };
-          }
+          const deleteRecordsButton = document.querySelector(".delete_records");
+          deleteRecordsButton.onclick = () => {
+            document.querySelectorAll(".myRecords").forEach((e) => e.remove());
+          };
         }
       }
     }
