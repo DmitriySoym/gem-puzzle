@@ -78,9 +78,6 @@ winningButton.textContent = "Ok";
 winningButton.classList.add("button");
 winningButton.addEventListener("click", () => {
   winning.classList.toggle("visible");
-  //   document.querySelectorAll(".myRecords").forEach((e) => e.remove());
-
-  //   bestResultRender();
 });
 winning.append(winningButton);
 
@@ -91,6 +88,7 @@ containerButtonsDown.classList.add("container__buttons__first");
 containerButtonsDown.innerHTML = `
     <div class="container__form">
         <form name="my" class="form">
+		  <div class="button button__restart" type="submit">Restart</div>
             <div class="button button__new" type="submit">New game</div>
                 <select name="size" size="1" class="button button__select">
                      <option value="3">3x3</option>
@@ -154,6 +152,16 @@ buttonFameClear.addEventListener("click", () => {
   showbestRes();
 });
 
+const buttonRestart = document.querySelector(".button__restart");
+buttonRestart.addEventListener("click", () => {
+  localRemoveExceptFame();
+  timeHTML.textContent = "00:00:00";
+  movesCounter = 0;
+
+  movesHTML.textContent = movesCounter;
+  startGame();
+});
+
 const buttonNew = document.querySelector(".button__new");
 buttonNew.addEventListener("click", () => {
   localRemoveExceptFame();
@@ -165,6 +173,7 @@ buttonNew.addEventListener("click", () => {
 });
 
 const form = document.forms.my;
+
 const buttonFinish = document.querySelector(".button__finish");
 
 const toggleSounds = document.querySelector(".volume_off");
@@ -374,6 +383,23 @@ function createHtmlPuzzle(randomPuzzleLoc) {
   return arr;
 }
 
+// board.ondragover = function (event) {
+//   event.preventDefault();
+// };
+
+// board.ondragstart = function (event) {
+//   let targets = event.target.closest("div");
+//   //   const n = +targets.id;
+//   targets && event.dataTransfer.setData("id", event.target.id);
+// };
+
+// board.ondrop = function (event) {
+//   let itemId = event.dataTransfer.getData("id");
+//   console.log(itemId);
+//   //   event.target.append(document.getElementById(itemId));
+//   event.target.innerHTML = "";
+// };
+
 function isSolvable(puzzle) {
   let sum = 0;
   let e = 0;
@@ -455,6 +481,7 @@ function calcManhattanDist(puzzle) {
 function createBlock(x, y, textContent) {
   const item = document.createElement("div");
   item.classList.add("item");
+  item.draggable = true;
   item.style.left = `${x * blockSide}px`;
   item.style.top = `${y * blockSide}px`;
   item.style.width = `${blockSide}px`;
@@ -717,10 +744,15 @@ function endGame() {
     localStorage.setItem("fame", string);
 
     const winningInfo = document.createElement("div");
-    winningInfo.innerHTML = `Hooray! You solved the puzzle in ${timeHTML.textContent}  and ${movesCounter} moves!`;
-    for (let i = 2; i < winning.children.length - 1; ) {
-      winning.removeChild(winning.children[2]);
+
+    winningInfo.innerHTML = `
+	 
+	 <div>Hooray! You solved the puzzle in ${timeHTML.textContent}  and ${movesCounter} moves!</div>
+	 `;
+    for (let i = 0; i < winning.children.length - 1; ) {
+      winning.removeChild(winning.children[1]);
     }
+
     winning.insertBefore(winningInfo, winning.childNodes[2]);
     winning.classList.add("visible");
   } else playSound("finish");
@@ -750,7 +782,7 @@ function showbestRes() {
 
   if (localStorage.getItem("fame")) {
     let fames = localStorage.getItem("fame");
-    fames = JSON.parse(fames);
+    fames = JSON.parse(fames).slice(0, 10);
 
     const { children } = bestRes;
 
@@ -765,7 +797,6 @@ function showbestRes() {
                         `;
 
           children[i].appendChild(el);
-          console.log(el);
 
           const deleteRecordsButton = document.querySelector(".delete_records");
           deleteRecordsButton.onclick = () => {
