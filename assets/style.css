@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #eee;
+}
+
+body {
+  padding-top: 6vh;
+  text-align: center;
+
+  width: 100vw;
+  height: 100vh;
+  background: inherit;
+  overflow: hidden;
+}
+
+.appBody {
+  margin: 0 auto;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 8px;
+}
+
+.container__buttons__second {
+  margin-bottom: 15px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  text-shadow: -1px -1px 2px #000, 1px 1px 2px #000, 1px -1px 2px #000,
+    -1px 1px 2px #000;
+}
+
+.container__buttons__item {
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+}
+
+.item__left {
+  width: 35%;
+  justify-content: flex-start;
+}
+
+.item__center {
+  width: 30%;
+  justify-content: center;
+}
+
+.item__right {
+  width: 35%;
+  justify-content: flex-end;
+}
+
+.indent {
+  margin-right: 4px;
+  text-shadow: none;
+  color: black;
+}
+
+.timeHTML,
+.movesHTML {
+  text-shadow: none;
+  color: black;
+}
+
+.board {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 5px solid;
+  box-sizing: content-box;
+
+  width: 400px;
+}
+
+@media (max-width: 479.98px) {
+  .board {
+    width: 300px;
+  }
+}
+
+.item {
+  position: absolute;
+  background-color: #004e92;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #666;
+  border-radius: 8%;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+
+  font-size: 36px;
+  text-shadow: -1px -1px 2px #000, 1px 1px 2px #000, 1px -1px 2px #000,
+    -1px 1px 2px #000;
+}
+
+.item__win {
+  cursor: default;
+  border: none;
+  border-radius: 0;
+}
+
+.empty {
+  border: none;
+  border-radius: 0;
+  cursor: default;
+
+  background-position: 100% 100%;
+  opacity: 0;
+}
+
+.empty__win {
+  opacity: 1;
+}
+
+.container__buttons__first {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__form {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  margin-right: 22px;
+}
+
+.button__new,
+.button__restart {
+  margin-right: 6px;
+}
+
+.button {
+  padding: 8px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px #000;
+
+  transition: 0.5s;
+  background-size: 200% auto;
+  background: #004e92;
+}
+
+.button:hover {
+  box-shadow: 2px 2px 3px #000;
+  background-position: right center;
+}
+
+.button:active {
+  transform: scale(1.2);
+}
+
+.button__select {
+  padding-top: 6px;
+
+  border: none;
+  outline: none;
+  background-color: #004e92;
+}
+
+.options {
+  display: flex;
+}
+
+.options > .button:first-child {
+  margin-right: 22px;
+}
+
+.topresults,
+.winning {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+
+  min-height: 400px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  border-radius: 8px;
+  background-color: #444;
+}
+
+.topresults div {
+  font-size: 14px;
+}
+
+.button__fame_close {
+  margin-right: 10px;
+}
+
+.winning {
+  min-height: 200px;
+}
+
+.visible {
+  display: flex;
+}
+
+.button__finish {
+  display: none;
+}
