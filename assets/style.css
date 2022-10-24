@@ -14,7 +14,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: inherit;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .appBody {
@@ -83,11 +83,11 @@ body {
   width: 400px;
 }
 
-@media (max-width: 479.98px) {
+/* @media (max-width: 479.98px) {
   .board {
     width: 300px;
   }
-}
+} */
 
 .item {
   position: absolute;
@@ -165,6 +165,8 @@ body {
   transition: 0.5s;
   background-size: 200% auto;
   background: #004e92;
+
+  border: none;
 }
 
 .button:hover {
@@ -228,4 +230,8 @@ body {
 
 .button__finish {
   display: none;
+}
+
+.infoblock {
+  color: black;
 }
