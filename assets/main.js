@@ -135,6 +135,13 @@ board.style.width = `${gameArea}px`;
 board.style.height = `${gameArea}px`;
 appBody.appendChild(board);
 
+const infoBlock = document.createElement("div");
+infoBlock.classList.add("infoblock");
+infoBlock.style.width = `${gameArea}px`;
+infoBlock.innerText =
+  "Для победы нужно собрать пазл так, чтобы пустая ячейка была в нижнем правом углу. Ваш прогрессс сохраняется автоматически, игру можно продолжить с того места, на котором окончили играть.";
+appBody.append(infoBlock);
+
 const buttonFame = document.querySelector(".button__fame");
 buttonFame.addEventListener("click", showbestRes);
 
@@ -383,9 +390,30 @@ function createHtmlPuzzle(randomPuzzleLoc) {
   return arr;
 }
 
-// board.ondragover = function (event) {
-//   event.preventDefault();
-// };
+board.addEventListener("dragover", (event) => {
+  event.preventDefault();
+});
+
+// board.addEventListener("drop", (event) => {
+//   const buttonNode = document.getElementById(event.dataTransfer.getData("id"));
+
+//   console.log(event.dataTransfer.getData("id"));
+//   if (!buttonNode) {
+//     return;
+//   }
+
+//   const buttonNumber = Number(buttonNode.id);
+//   const buttonCoords = findCoordinatesByNumber(buttonNumber, matrix);
+//   const blankCoords = findCoordinatesByNumber(countCells, matrix);
+//   const isValid = isValidForSwap(buttonCoords, blankCoords);
+
+//   if (isValid) {
+//     changeAudio(playAudio);
+
+//     swap(blankCoords, buttonCoords, matrix);
+//     setPositionCells(matrix);
+//   }
+// });
 
 // board.ondragstart = function (event) {
 //   let targets = event.target.closest("div");
@@ -396,7 +424,7 @@ function createHtmlPuzzle(randomPuzzleLoc) {
 // board.ondrop = function (event) {
 //   let itemId = event.dataTransfer.getData("id");
 //   console.log(itemId);
-//   //   event.target.append(document.getElementById(itemId));
+//   event.target.append(document.getElementById(itemId));
 //   event.target.innerHTML = "";
 // };
 
