@@ -99,6 +99,7 @@ containerButtonsDown.innerHTML = `
                     <option value="8">8x8</option>
                 </select>
         </form>
+        <div class="button button__finish"></div>
 		  <div class="options">
         <button class="button volume_off"><i class="material-icons">sound on</i></button>
         </div>
@@ -116,10 +117,7 @@ containerButtonsUp.innerHTML = `
     <div class="container__buttons__item item__center">
         <button class="button button__fame">TOP results</button>
     </div>
-	 <div class="container__buttons__item item__center">
-	 <div class="button button__finish">Solution</div>
-    </div>
-	     <div class="container__buttons__item item__right">
+    <div class="container__buttons__item item__right">
         <span class="indent indent_moves">Moves:</span>
         <span class="movesHTML"></span> 
     </div>
@@ -136,6 +134,13 @@ board.classList.add("board");
 board.style.width = `${gameArea}px`;
 board.style.height = `${gameArea}px`;
 appBody.appendChild(board);
+
+const infoBlock = document.createElement("div");
+infoBlock.classList.add("infoblock");
+infoBlock.style.width = `${gameArea}px`;
+infoBlock.innerText =
+  "Для победы нужно собрать пазл так, чтобы пустая ячейка была в нижнем правом углу. Ваш прогрессс сохраняется автоматически, игру можно продолжить с того места, на котором окончили играть.";
+appBody.append(infoBlock);
 
 const buttonFame = document.querySelector(".button__fame");
 buttonFame.addEventListener("click", showbestRes);
@@ -388,6 +393,40 @@ function createHtmlPuzzle(randomPuzzleLoc) {
 board.addEventListener("dragover", (event) => {
   event.preventDefault();
 });
+
+// board.addEventListener("drop", (event) => {
+//   const buttonNode = document.getElementById(event.dataTransfer.getData("id"));
+
+//   console.log(event.dataTransfer.getData("id"));
+//   if (!buttonNode) {
+//     return;
+//   }
+
+//   const buttonNumber = Number(buttonNode.id);
+//   const buttonCoords = findCoordinatesByNumber(buttonNumber, matrix);
+//   const blankCoords = findCoordinatesByNumber(countCells, matrix);
+//   const isValid = isValidForSwap(buttonCoords, blankCoords);
+
+//   if (isValid) {
+//     changeAudio(playAudio);
+
+//     swap(blankCoords, buttonCoords, matrix);
+//     setPositionCells(matrix);
+//   }
+// });
+
+// board.ondragstart = function (event) {
+//   let targets = event.target.closest("div");
+//   //   const n = +targets.id;
+//   targets && event.dataTransfer.setData("id", event.target.id);
+// };
+
+// board.ondrop = function (event) {
+//   let itemId = event.dataTransfer.getData("id");
+//   console.log(itemId);
+//   event.target.append(document.getElementById(itemId));
+//   event.target.innerHTML = "";
+// };
 
 function isSolvable(puzzle) {
   let sum = 0;

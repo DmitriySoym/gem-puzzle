@@ -1,0 +1,702 @@
+@media (max-width: 895px) {
+  .secondblock .aligator {
+    display: none;
+  }
+
+  .secondblock .sloth {
+    display: none;
+  }
+
+  .firstblock .gorilla {
+    display: none;
+  }
+
+  .thirdblock .eagle {
+    display: none;
+  }
+
+  .penguin {
+    display: none;
+  }
+
+  .pets__items {
+    max-width: 700px;
+    row-gap: 47px;
+  }
+}
+
+@media (max-width: 992.98px) {
+  /*-----------header------*/
+
+  .header {
+    height: 34px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    &__logo {
+      width: 46.86px;
+      height: 29.03px;
+      border: none;
+      top: 3px;
+    }
+
+    &__logo h1 {
+      width: 46.86px;
+      height: 29.03px;
+      font-size: 12.2899px;
+      line-height: 120%;
+    }
+  }
+
+  .headerwrapper {
+    padding: 0 20px;
+  }
+
+  .burgermenu {
+    display: block;
+    width: 18px;
+    padding: 4px 0;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    right: 20px;
+    z-index: 10;
+
+    &_toggle {
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      top: 1px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      transition: all 0.2s linear;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        transition: transform 0.2s linear;
+        bottom: -4px;
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        transition: transform 0.2s linear;
+        bottom: 4px;
+      }
+    }
+  }
+
+  .logo_icon {
+    top: 12px;
+    left: 3px;
+    background: url(../img/header/bamboo-small.svg) no-repeat;
+  }
+
+  .headerwrapper {
+    height: 100%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .designedby {
+    display: none;
+  }
+
+  /*------watchonline-----*/
+
+  .watchonline {
+    height: 373px;
+
+    &_btn {
+      left: 20px;
+      top: 279px;
+    }
+  }
+
+  .orangeelipse {
+    width: 237.6px;
+    height: 237.6px;
+    top: 44.23px;
+    right: 70.11px;
+    left: unset;
+  }
+
+  .watchonlinetext {
+    font-size: 54.2894px;
+    line-height: 75%;
+    width: 255px;
+    height: 204px;
+    right: 16px;
+    top: 83px;
+  }
+
+  /*-----backstage------*/
+
+  .backstage {
+    height: 507px;
+
+    &_picture {
+      display: none;
+    }
+
+    &__textcontent {
+      &_title {
+        margin-bottom: 22.7px;
+        padding-left: 4px;
+        width: 460px;
+      }
+
+      &_textone {
+        margin-bottom: 30px;
+      }
+
+      &_subtitle {
+        padding-left: 3px;
+        margin-bottom: 19px;
+      }
+
+      &_texttwo {
+        width: 503px;
+      }
+    }
+  }
+
+  .backstagewrapper {
+    padding-top: 62px;
+  }
+
+  .backstagerow {
+    padding-left: 20px;
+  }
+
+  .backstageflower {
+    display: block;
+    transform: scale(0.79);
+    right: -51px;
+    top: -70px;
+    z-index: -1;
+  }
+
+  /*-----pets------*/
+  .corusel {
+    max-width: 700px;
+  }
+  .petswrapper {
+    padding: 0 20px;
+    height: 970px;
+  }
+
+  .aligator .pets__item_poto img {
+    width: 285.24px;
+  }
+
+  .pets {
+    &_btn {
+      margin-top: 15px;
+    }
+
+    &__item {
+      max-width: 285px;
+      height: 332px;
+
+      &_poto img {
+        width: 285.24px;
+        height: 285.24px;
+      }
+
+      &_info {
+        top: -69px;
+      }
+
+      &_name {
+        transform: scale(0.75);
+      }
+
+      &_icon {
+        transform: scale(0.8);
+        top: -7px;
+        position: relative;
+        right: -6px;
+      }
+    }
+
+    &_name {
+      height: 16px;
+      position: relative;
+      top: -13px;
+      left: -33px;
+      letter-spacing: 0.19px;
+    }
+
+    &_area {
+      position: relative;
+      top: -9px;
+      left: -33px;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  .prew {
+    top: 35.45%;
+    left: 243px;
+  }
+
+  .next {
+    top: 35.45%;
+    right: 243px;
+  }
+
+  .bottom-left {
+    left: -60px;
+  }
+
+  .bottom-right {
+    transform: scale(0.7);
+    right: -33px;
+    bottom: -27px;
+  }
+
+  .gorilla_name {
+    padding-left: 24px;
+  }
+
+  /*-----pick------*/
+
+  .pick {
+    height: 781px;
+    padding-top: 20px;
+
+    &_btn {
+      margin-top: 19px;
+    }
+
+    &__row {
+      padding: 0 20px;
+
+      &_wrapper {
+        bottom: 20px;
+        width: 588px;
+      }
+    }
+
+    &__title {
+      font-weight: 400;
+      font-size: 42px;
+      line-height: 120%;
+      margin: 0 auto 19px;
+    }
+
+    &__subtitle {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 120%;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__warningifo {
+      width: auto;
+    }
+
+    &__items {
+      padding: 0;
+    }
+  }
+
+  .pickwrapper {
+    width: 640px;
+    padding-top: 10px;
+    height: 740px;
+  }
+
+  .arrow-one {
+    display: none;
+  }
+
+  .arrow-two {
+    display: none;
+  }
+
+  .greenarrow1,
+  .greenarrow2 {
+    display: block;
+    position: absolute;
+  }
+
+  .greenarrow1 {
+    top: -17px;
+    right: 362px;
+  }
+
+  .greenarrow2 {
+    top: -18px;
+    right: 154px;
+  }
+
+  /*-----testimonials------*/
+
+  .testimonialswrapper {
+    padding-top: 61px;
+    padding-left: unset;
+    padding-right: unset;
+    height: 666px;
+  }
+
+  .testimonials-container {
+    width: 100%;
+    height: 357px;
+  }
+
+  .testimonials {
+    &__items {
+      flex-direction: column;
+      margin-bottom: 0;
+      max-width: 600px;
+      margin: 0 auto;
+      position: unset;
+    }
+
+    &__title {
+      padding-right: 2px;
+    }
+
+    &__item {
+      width: 600px;
+      height: 109px;
+      margin-bottom: 14px;
+      pointer-events: unset;
+
+      &_icon {
+        padding: 11px 10px 7px 15px;
+      }
+
+      &_top {
+        position: relative;
+        left: -5px;
+        width: 601px;
+      }
+
+      &_text {
+        height: 35px;
+        padding: 3px 18px 1px 16px;
+      }
+    }
+
+    &_scroll {
+      display: none;
+    }
+  }
+
+  .dot {
+    margin: 0 3px 0px;
+  }
+
+  .username {
+    padding-top: 12px;
+  }
+
+  .btn-typetwo {
+    margin: 39px auto 0;
+    display: block;
+    width: 239px;
+    font-weight: 400;
+  }
+
+  .leavfoto {
+    right: -69px;
+    top: 429.52px;
+    transform: scale(0.62);
+  }
+
+  /*-----footer------*/
+
+  .footerwrapper {
+    padding: 15px 20px 0;
+  }
+
+  .footer {
+    position: relative;
+    height: 278px;
+
+    &__logo {
+      top: -3px;
+      left: 1px;
+      width: 82px;
+      height: 52px;
+      border: 1px solid #fff;
+      border-radius: 3px;
+    }
+
+    &__menu {
+      padding-left: unset;
+      width: auto;
+    }
+
+    &__menu {
+      padding-bottom: 9px;
+    }
+  }
+
+  .footer__logo_icon {
+    top: 29px;
+    left: 12px;
+    transform: scaleY(1.5);
+  }
+
+  .subscribe-part {
+    display: none;
+  }
+
+  .footerbtn-type-two {
+    margin-top: 30px;
+  }
+
+  .social {
+    position: absolute;
+    top: 13px;
+    right: 8px;
+
+    &__container {
+      margin-bottom: 20px;
+    }
+
+    &__item {
+      display: none;
+    }
+  }
+
+  .footer-nav_item {
+    margin: 0;
+    margin-right: 37px;
+  }
+
+  .bottom-footer-part {
+    padding-top: 24px;
+  }
+
+  /*-----donate------*/
+
+  .panda-photo {
+    height: 335px;
+    background-position-x: 37%;
+    margin-top: 34px;
+  }
+
+  .friendwrapper {
+    padding: 0 20px;
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .friend {
+    padding-top: 31px;
+    height: 1333px;
+
+    &__title {
+      padding-left: 0;
+      font-size: 24px;
+      line-height: 120%;
+      width: auto;
+      margin-bottom: 20px;
+    }
+
+    &__discription {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 137%;
+      width: 601px;
+      padding-left: 1px;
+    }
+
+    &__subtitle {
+      margin-top: 30px;
+      margin-bottom: 28px;
+      padding-left: 0;
+    }
+
+    &__row {
+      max-width: 600px;
+      width: 100%;
+      padding-top: 30px;
+      height: 918px;
+    }
+
+    &__sub {
+      text-align: center;
+      font-size: 24px;
+      line-height: 120%;
+      padding-left: 0;
+      margin-bottom: 50px;
+    }
+
+    &__qntt {
+      width: auto;
+      padding-left: 26px;
+      padding-right: 40px;
+    }
+  }
+
+  .friendrowtitle {
+    font-size: 48px;
+    line-height: 120%;
+    margin-bottom: 23px;
+    padding-left: 5px;
+  }
+
+  .donate-form {
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .debt_anount_slider {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .amount {
+    margin-bottom: 7px;
+    padding-top: 9px;
+    padding-left: 10px;
+
+    &_price {
+      width: 524px;
+      left: -3px;
+    }
+
+    &_price::after {
+      width: 524px;
+    }
+  }
+
+  .secondamount,
+  .thirdamount {
+    display: none;
+  }
+
+  .moneys span {
+    right: -11px;
+  }
+
+  .anotheramount input[type="number"] {
+    width: 180px;
+    height: 42px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    position: relative;
+    left: 8px;
+  }
+
+  .anotheramount label {
+    left: -17px;
+    top: 2px;
+    position: relative;
+  }
+
+  .monthlyonce {
+    padding-left: 193px;
+    margin-top: 33px;
+  }
+
+  .donatebtn {
+    padding-left: 7px;
+    margin: 31px auto 0;
+  }
+
+  .sharetext {
+    margin: 33px auto 0;
+    padding-left: 2px;
+  }
+
+  .donateheader__logo {
+    top: 6px;
+    left: 5px;
+  }
+
+  .donatelogo_icon {
+    top: 16px;
+    left: 7px;
+  }
+
+  /*-- popup  --*/
+
+  .popup {
+    position: fixed;
+    top: 34px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 16, 16, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease 0s;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      z-index: 2;
+      transition: all 0.3s linear;
+    }
+
+    &__body {
+      // max-width: 320px;
+      width: 100%;
+      min-height: 428px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 10px;
+      background: #f5f7f6;
+      margin: 0 auto;
+    }
+
+    &__content {
+      background: #f5f7f6;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__close {
+      position: absolute;
+      top: 12px;
+      right: 10px;
+    }
+  }
+
+  .testimonials__item.open {
+    z-index: 3;
+    position: fixed;
+    width: 267px;
+    height: 391px;
+    left: calc(50% - 267px / 2 - 9.5px);
+    top: 50px;
+
+    .testimonials__item_text {
+      height: 312px;
+    }
+  }
+}

@@ -1,0 +1,168 @@
+.testimonials {
+  position: relative;
+  &__title {
+    font-size: 36px;
+    line-height: 130%;
+    text-align: center;
+    color: #333b41;
+    margin-bottom: 47px;
+  }
+
+  &__items {
+    @extend %flexforitem;
+    margin-bottom: 15px;
+    width: 3240px;
+    position: relative;
+    transition: all 0.4s linear;
+  }
+
+  &__item {
+    width: 268px;
+    height: 391px;
+    background: #f1f3f2;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    pointer-events: none;
+    background: linear-gradient(
+          315.75deg,
+          rgba(254, 189, 171, 0.74) 30.06%,
+          rgba(243, 169, 248, 0.66) 50.74%,
+          #e0d8f0 80.49%,
+          #eaf7fe 127.9%,
+          #eaf7fe 149.54%
+        )
+        border-box,
+      linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      );
+    &_top {
+      display: flex;
+    }
+
+    &_icon {
+      background: #f1f3f2;
+      padding: 12px 10px 11px 15px;
+    }
+
+    &_userinfo {
+      background: #f1f3f2;
+      flex: 1 1 auto;
+    }
+
+    &_text {
+      background: #f1f3f2;
+      width: 100%;
+      height: 305px;
+      overflow: hidden;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 120%;
+      color: #767474;
+      padding: 0 13px 17px 14px;
+    }
+  }
+}
+
+.testimonials-container {
+  width: 1160px;
+  overflow: hidden;
+}
+
+.bottomblock {
+  height: 22px;
+  background: #f1f3f2;
+}
+
+.testimonialswrapper {
+  padding-top: 140px;
+
+  height: 919px;
+  width: 1160px;
+}
+.username {
+  padding-top: 13px;
+  line-height: 120%;
+  color: #000000;
+}
+.location {
+  display: flex;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  color: #bdbdbd;
+}
+
+.dot {
+  margin: 0 5px 6px;
+}
+.testimonial {
+  &_time {
+    padding-left: 3px;
+  }
+}
+
+.scrollfortes {
+  width: 599px;
+  height: 8px;
+  background: #f5f7f6;
+  border-radius: 5px;
+}
+
+/*-- стилизуется область, в которой находится ползунок и полоса слайдера, в ней также полоска ползунка находится---*/
+.testimonials_scroll input[type="range"] {
+  -webkit-appearance: none !important; /* Скрывает слайдер, чтобы можно было создать свой */
+  height: 8px;
+  margin-left: 280px;
+}
+
+// Оформление полоски слайдера
+/*оформление полосы прокрутки Chrome*/
+.testimonials_scroll input[type="range"]::-webkit-slider-runnable-track {
+  cursor: pointer;
+  background: #f5f7f6;
+  border-radius: 5px;
+  border: 0.5px solid transparent;
+  border: 0.5px solid rgba(254, 189, 171, 0.74);
+}
+
+/*оформление полосы прокрутки Firefox*/
+.testimonials_scroll input[type="range"]::-moz-range-track {
+  cursor: pointer;
+  height: 8px;
+  background: #f5f7f6;
+  border-radius: 5px;
+  border: 0.5px solid transparent;
+  border: 0.5px solid rgba(254, 189, 171, 0.74);
+}
+
+// Оформление ползунка
+/*--стилизация ползунка для Chrome--*/
+.testimonials_scroll input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: #fe9013;
+  width: 115.19px;
+  height: 6px;
+  border-radius: 5px;
+}
+
+/*--стилизация ползунка для Firefox--*/
+.testimonials_scroll input[type="range"]::-moz-range-thumb {
+  background: #fe9013;
+  width: 115.19px;
+  height: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.leavfoto {
+  position: absolute;
+  right: 0;
+  top: 642.52px;
+  z-index: -1;
+}
