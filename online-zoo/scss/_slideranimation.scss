@@ -6,7 +6,7 @@
 
 .pets__items {
   display: none;
-  animation: 0.5s ease-in-out;
+  animation: 1s ease-in-out;
 }
 
 .pets__items.activeslide {
@@ -26,7 +26,6 @@
 
 .to-left {
   animation-name: left;
-  //   animation-direction: reverse;
 }
 
 .from-right {

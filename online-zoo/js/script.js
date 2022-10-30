@@ -1,44 +1,29 @@
 /*----menu burger------*/
 
 const menuBurgerActive = document.querySelector(".burgermenu");
-
 const naveActive = document.querySelector(".nav");
-
 const headerLogo = document.querySelector(".header__logo");
-
-const headerwrapper = document.querySelector(".headerwrapper");
-
+const headerWrapper = document.querySelector(".headerwrapper");
 const designedby = document.querySelector(".designedby");
-
-const burgermenuback = document.querySelector(".burgermenu-back");
+const burgerMenuBack = document.querySelector(".burgermenu-back");
 
 menuBurgerActive.addEventListener("click", function () {
   menuBurgerActive.classList.toggle("active");
-
   designedby.classList.toggle("active");
-
   naveActive.classList.toggle("active");
-
   headerLogo.classList.toggle("active");
-
-  headerwrapper.classList.toggle("active");
-
-  burgermenuback.classList.toggle("active");
+  headerWrapper.classList.toggle("active");
+  burgerMenuBack.classList.toggle("active");
 });
 
-burgermenuback.addEventListener("click", function () {
-  if (burgermenuback.classList.contains("active")) {
-    burgermenuback.classList.remove("active");
-
+burgerMenuBack.addEventListener("click", function () {
+  if (burgerMenuBack.classList.contains("active")) {
+    burgerMenuBack.classList.remove("active");
     menuBurgerActive.classList.remove("active");
-
     designedby.classList.remove("active");
-
     naveActive.classList.remove("active");
-
     headerLogo.classList.remove("active");
-
-    headerwrapper.classList.remove("active");
+    headerWrapper.classList.remove("active");
   }
 });
 
@@ -88,35 +73,11 @@ const btnleft = document
       previousItem(currentItem);
     }
     changeCurrentItem(currentItem);
-    changeOrderLeft();
   });
 
 const firstBlock = document.querySelector(".firstblock");
 const secondBlock = document.querySelector(".secondblock");
 const thirdBlock = document.querySelector(".thirdblock");
-
-function changeOrderLeft() {
-  let firstel = firstBlock.children[0];
-  let secondel = firstBlock.children[1];
-  let thirdel = firstBlock.children[2];
-
-  secondel.before(thirdel);
-  firstBlock.append(firstel);
-
-  let firstelSecond = secondBlock.children[0];
-  let secondesecondl = secondBlock.children[1];
-  let thirdelSecond = secondBlock.children[2];
-
-  secondesecondl.before(thirdelSecond);
-  secondBlock.append(firstelSecond);
-
-  let firstelthird = thirdBlock.children[0];
-  let secondethird = thirdBlock.children[1];
-  let thirdelthird = thirdBlock.children[2];
-
-  secondethird.before(thirdelthird);
-  thirdBlock.append(firstelthird);
-}
 
 const btnright = document
   .querySelector(".next")
@@ -125,28 +86,8 @@ const btnright = document
       nextItem(currentItem);
     }
     changeCurrentItem(currentItem);
-    changeOrderRight();
   });
 
-function changeOrderRight() {
-  let firstel = firstBlock.children[0];
-  let secondel = firstBlock.children[1];
-  let thirdel = firstBlock.children[2];
-
-  secondel.before(thirdel);
-  firstBlock.append(firstel);
-
-  let firstelSecond = secondBlock.children[0];
-  let secondesecondl = secondBlock.children[1];
-  let thirdelSecond = secondBlock.children[2];
-
-  secondesecondl.before(thirdelSecond);
-  secondBlock.append(firstelSecond);
-
-  let firstelthird = thirdBlock.children[0];
-  let secondethird = thirdBlock.children[1];
-  let thirdelthird = thirdBlock.children[2];
-}
 /*------testimonials slider-----*/
 
 const testimonialsslide = document.querySelector(".scrollfortes");
@@ -210,12 +151,13 @@ function slidingTestimonials() {
     }
   }
 }
+
 testimonialsslide.addEventListener("input", slidingTestimonials);
 const popup = document.querySelector(".popup");
 const popupBody = document.querySelector(".popup__body");
 const popupClose = document.querySelector(".popup__close");
 
-testimonials.addEventListener("click", function (event) {
+function showPopup(event) {
   const testimonial = event.target.closest(".testimonials__item");
   if (testimonial) {
     testimonial.classList.add("open");
@@ -236,4 +178,6 @@ testimonials.addEventListener("click", function (event) {
     testimonial.classList.remove("open");
     popup.classList.remove("open");
   };
-});
+}
+
+testimonials.addEventListener("click", showPopup);
