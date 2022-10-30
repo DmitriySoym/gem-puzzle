@@ -420,7 +420,6 @@ h1 {
   padding-left: 14px;
   padding-right: 1px;
   height: 60px;
-  position: relative;
 }
 
 .aligator .pets__item_poto img {
@@ -1388,17 +1387,6 @@ input[type=number] {
   .pets__item:hover .pets__item_name {
     transform: translate(30px -160px);
   }
-  .pets__item_info {
-    top: -62px;
-  }
-  .pets__item_poto {
-    width: 294px;
-    height: 354px;
-  }
-  .pets__item_poto img {
-    width: 294px;
-    height: 294px;
-  }
   .pets__items {
     height: 801px;
     row-gap: 92px;
@@ -1907,13 +1895,6 @@ input[type=number] {
   .pets__item {
     max-width: 285px;
     height: 332px;
-  }
-  .pets__item_poto img {
-    width: 285.24px;
-    height: 285.24px;
-  }
-  .pets__item_info {
-    top: -69px;
   }
   .pets__item_name {
     transform: scale(0.75);
