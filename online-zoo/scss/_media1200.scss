@@ -14,19 +14,6 @@
     &:hover .pets__item_name {
       transform: translate(30px -160px);
     }
-
-    &_info {
-      top: -62px;
-    }
-
-    &_poto {
-      width: 294px;
-      height: 354px;
-      & img {
-        width: 294px;
-        height: 294px;
-      }
-    }
   }
 
   .pets__items {
