@@ -396,6 +396,7 @@ h1 {
   height: 891px;
   margin: 0 auto;
   position: relative;
+  padding: 0 15px;
 }
 .pets__item {
   overflow: hidden;
@@ -663,7 +664,7 @@ h1 {
   margin-bottom: 15px;
   width: 3240px;
   position: relative;
-  transition: all 0.4s linear;
+  transition: all 0.5s ease-in-out;
 }
 .testimonials__item {
   width: 268px;
@@ -2804,8 +2805,8 @@ input[type=number] {
 
 .pets__items {
   display: none;
-  -webkit-animation: 0.5s ease-in-out;
-          animation: 0.5s ease-in-out;
+  -webkit-animation: 1s ease-in-out;
+          animation: 1s ease-in-out;
 }
 
 .pets__items.activeslide {
