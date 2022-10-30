@@ -34,9 +34,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  text-shadow: -1px -1px 2px #000, 1px 1px 2px #000, 1px -1px 2px #000,
-    -1px 1px 2px #000;
 }
 
 .container__buttons__item {
@@ -51,7 +48,6 @@ body {
 }
 
 .item__center {
-  width: 30%;
   justify-content: center;
 }
 
@@ -82,12 +78,6 @@ body {
 
   width: 400px;
 }
-
-/* @media (max-width: 479.98px) {
-  .board {
-    width: 300px;
-  }
-} */
 
 .item {
   position: absolute;
@@ -228,9 +218,9 @@ body {
   display: flex;
 }
 
-.button__finish {
+/* .button__finish {
   display: none;
-}
+} */
 
 .infoblock {
   color: black;
