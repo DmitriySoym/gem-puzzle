@@ -1,0 +1,61 @@
+.corusel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pets__items {
+  display: none;
+  animation: 1s ease-in-out;
+}
+
+.pets__items.activeslide {
+  display: flex;
+}
+
+.activeslide,
+.nextslide {
+  display: flex;
+}
+
+.nextslide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
