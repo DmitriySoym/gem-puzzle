@@ -86,7 +86,7 @@ document.body.prepend(appBody);
 const containerButtonsDown = document.createElement("div");
 containerButtonsDown.classList.add("container__buttons__first");
 containerButtonsDown.innerHTML = `
-    <div class="container__form">
+    
         <form name="my" class="form">
 		  <div class="button button__restart" type="submit">Restart</div>
             <div class="button button__new" type="submit">New game</div>
@@ -99,32 +99,42 @@ containerButtonsDown.innerHTML = `
                     <option value="8">8x8</option>
                 </select>
         </form>
-		  <div class="options">
-        <button class="button volume_off"><i class="material-icons">sound on</i></button>
-        </div>
-    </div>
+		  
+   
 `;
 
 appBody.appendChild(containerButtonsDown);
-const containerButtonsUp = document.createElement("div");
-containerButtonsUp.classList.add("container__buttons__second");
-containerButtonsUp.innerHTML = `
-    <div class="container__buttons__item item__left">
-        <i class="material-icons indent">timer</i>
-        <span class="timeHTML"></span>
-    </div>
-    <div class="container__buttons__item item__center">
-        <button class="button button__fame">TOP results</button>
-    </div>
-	 <div class="container__buttons__item item__center">
-	 <div class="button button__finish">Solution</div>
-    </div>
-	     <div class="container__buttons__item item__right">
-        <span class="indent indent_moves">Moves:</span>
-        <span class="movesHTML"></span> 
-    </div>
+
+const containerButtonsMiddle = document.createElement("div");
+containerButtonsMiddle.classList.add("container__buttons__second");
+containerButtonsMiddle.innerHTML = `
+  <div class="container__buttons__item item__center">
+    <button class="button button__fame">TOP results</button>
+  </div>
+  <div class="container__buttons__item item__center">
+  <div class="button button__finish">Solution</div>
+  </div>
+  <div class="options">
+  <button class="button volume_off"><i class="material-icons">sound on</i></button>
+  </div>
 `;
-appBody.appendChild(containerButtonsUp);
+appBody.appendChild(containerButtonsMiddle);
+
+const containerGameInfo = document.createElement("div");
+containerGameInfo.classList.add("game-info");
+containerGameInfo.innerHTML = `
+  <div class="container__buttons__item item__left">
+    <i class="material-icons indent">timer</i>
+    <span class="timeHTML"></span>
+  </div>
+  <div class="container__buttons__item item__right">
+    <span class="indent indent_moves">Moves:</span>
+    <span class="movesHTML"></span> 
+</div>
+`;
+
+appBody.appendChild(containerGameInfo);
+
 const movesHTML = document.querySelector(".movesHTML");
 movesHTML.textContent = movesCounter;
 
