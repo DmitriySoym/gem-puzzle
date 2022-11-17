@@ -1,0 +1,539 @@
+@media (max-width: 638.98px) {
+  /*-----------header------*/
+
+  .headerwrapper {
+    padding: 0 10px;
+  }
+
+  .burgermenu {
+    right: 10px;
+
+    &_toggle {
+      top: 3px;
+
+      &::after {
+        bottom: -4px;
+      }
+
+      &::before {
+        bottom: 4px;
+      }
+    }
+  }
+
+  /*------watchonline-----*/
+
+  .watchonline {
+    height: 186.96px;
+    position: relative;
+    top: 34px;
+    margin-bottom: 23%;
+
+    &_btn {
+      left: 3%;
+      top: 207px;
+    }
+  }
+
+  .orangeelipse {
+    width: 119.09px;
+    height: 119.09px;
+    left: calc(50% - 119.09px / 2 + 62.45px);
+    top: 22.17px;
+  }
+
+  .watchonlinetext {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 75%;
+    width: 128.13px;
+    height: 102.44px;
+    left: calc(50% - 128.13px / 2 + 85.67px);
+    top: 41.12px;
+  }
+
+  /*-----backstage------*/
+
+  .backstage {
+    height: 492px;
+
+    &_picture {
+      display: none;
+    }
+
+    &__textcontent {
+      &_title {
+        font-size: 24px;
+        line-height: 120%;
+        width: 300px;
+        padding-top: 7px;
+        margin-bottom: 9.7px;
+      }
+
+      &_textone {
+        padding-left: 6px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      &_subtitle {
+        padding-left: 6px;
+        margin-bottom: 10px;
+      }
+
+      &_texttwo {
+        width: 100%;
+        padding-left: 4px;
+        line-height: 138%;
+      }
+    }
+  }
+
+  .bigflower {
+    transform: scale(0.47);
+  }
+
+  .backstageflower {
+    top: -198px;
+    right: -107px;
+  }
+
+  .backstagerow {
+    padding-left: 6px;
+  }
+
+  /*-----pets------*/
+
+  .prew,
+  .next {
+    display: none;
+  }
+
+  .petswrapper {
+    padding: 0 17px;
+    height: 1522px;
+  }
+
+  .corusel-container {
+    height: 1394px;
+  }
+
+  .pets {
+    &__items {
+      row-gap: 20px;
+      justify-content: center;
+      max-width: 500px;
+    }
+
+    &_name {
+      left: -37px;
+    }
+
+    &_area {
+      left: -37px;
+    }
+  }
+
+  .bottom-left {
+    left: -74px;
+    transform: scale(0.35);
+    top: 1384px;
+  }
+
+  .bottom-right {
+    transform: scale(0.37);
+    bottom: -59px;
+    right: -96px;
+  }
+
+  /*-----pick------*/
+
+  .pickwrapper {
+    width: 100%;
+    height: 1042px;
+  }
+
+  .pick {
+    height: 1082px;
+
+    padding: 20px 10px 0;
+
+    &__row {
+      padding: 10px 0 0;
+    }
+
+    &__items {
+      flex-direction: column;
+    }
+
+    &__row_wrapper {
+      width: 100%;
+    }
+
+    &__title {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 120%;
+      margin-bottom: 12px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      line-height: 120%;
+      text-align: center;
+      padding-right: 2px;
+    }
+
+    &__warningifo,
+    &__text {
+      display: none;
+    }
+
+    &__item_icon {
+      margin-bottom: 11px;
+    }
+
+    &__item_text {
+      margin-bottom: 17px;
+    }
+
+    .pick__itemsecond {
+      margin-bottom: 9px;
+    }
+
+    &_btn {
+      margin-top: -1px;
+      padding-left: 1px;
+    }
+  }
+
+  .pickifo {
+    &__title {
+      font-size: 24px;
+      line-height: 120%;
+    }
+  }
+
+  .greenarrow1 {
+    transform: rotate(85deg);
+    top: 148px;
+    left: 77vw;
+  }
+
+  .greenarrow2 {
+    transform: rotate(85deg);
+    top: 397px;
+    left: 77vw;
+  }
+
+  /*-----testimonials------*/
+  .testimonialswrapper {
+    width: 100%;
+    height: 580px;
+    padding: 31px 10px 0;
+  }
+
+  .testimonials {
+    &__items {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 120%;
+      margin-bottom: 21px;
+    }
+
+    &__item {
+      max-width: 300px;
+      width: 100%;
+
+      &_icon {
+        padding: 8px 8px 0px 15px;
+      }
+
+      &_top {
+        width: 102%;
+      }
+    }
+  }
+
+  .username {
+    padding-top: 8px;
+  }
+
+  .dot {
+    margin: 0 3px 7px;
+  }
+
+  .btn-typetwo {
+    margin: 29px auto 0;
+  }
+
+  .leavfoto {
+    transform: scale(0.3) rotate(-13deg);
+    right: -99px;
+    top: 362.52px;
+  }
+
+  /*-----footer------*/
+  .footerwrapper {
+    padding: 15px 0 0 0;
+  }
+
+  .social {
+    display: flex;
+    width: 204px;
+    justify-content: space-between;
+    top: 73px;
+    right: 52px;
+  }
+
+  .footer {
+    height: 334px;
+
+    &__logo {
+      border: none;
+      width: 132px;
+      margin: 0 auto;
+
+      &_icon {
+        top: 8px;
+        left: 72px;
+      }
+    }
+
+    &__header {
+      width: 100%;
+    }
+
+    &__nav {
+      width: 314px;
+      padding-right: 6px;
+    }
+  }
+
+  .footerbtn-type-two {
+    margin-top: 61px;
+    margin: 61px auto 30px;
+    display: block;
+    padding-right: 4px;
+    padding-top: 2px;
+  }
+
+  .top-part {
+    padding: 0;
+  }
+
+  .bottom-footer-part {
+    width: 100%;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  .footer-nav_item {
+    margin: 0 15px;
+  }
+
+  .disigned-by {
+    font-weight: 100;
+    padding: 0;
+    font-size: 15px;
+    margin-right: 11px;
+    margin-bottom: 29px;
+  }
+
+  /*-----donate------*/
+
+  .panda-photo {
+    height: 187px;
+    background-position-x: 33%;
+  }
+
+  .friendwrapper {
+    padding: 0;
+  }
+
+  .friend {
+    height: 1146px;
+    padding-top: 30px;
+
+    &__title {
+      width: 100%;
+    }
+
+    &__discription {
+      width: 100%;
+      line-height: 138%;
+    }
+
+    &__subtitle {
+      width: 100%;
+      font-size: 24px;
+      line-height: 120%;
+    }
+    &__row {
+      padding-top: 20px;
+      height: 594px;
+    }
+
+    &__sub {
+      font-size: 16px;
+      line-height: 128%;
+      padding-left: 2px;
+      margin-bottom: 0;
+    }
+
+    &__qntt {
+      padding: 0;
+      width: 100%;
+      justify-content: center;
+    }
+
+    &__all {
+      padding: 0;
+      margin-top: 40px;
+    }
+  }
+
+  .diet {
+    font-size: 9.02255px;
+    line-height: 140%;
+    text-align: center;
+    width: 90px;
+  }
+
+  .number {
+    font-size: 40.6015px;
+    line-height: 80%;
+    margin-bottom: 6.2px;
+  }
+
+  .mult {
+    padding-right: 28.9px;
+    padding-top: 30px;
+    margin: 0 6px;
+  }
+
+  .mult img {
+    width: 7.89px;
+  }
+
+  .panda_widget {
+    padding-top: 14px;
+  }
+
+  .panda_widget img {
+    width: 161px;
+  }
+
+  .donate-form {
+    margin-top: -7px;
+  }
+
+  .amount {
+    padding-left: 0;
+  }
+
+  .debt_anount_slider {
+    height: 14px;
+    width: 100%;
+  }
+
+  .amount_price {
+    width: 100%;
+    padding: 2px 17px 0 20px;
+  }
+
+  .amount_price::after {
+    width: 100%;
+  }
+
+  .radbut {
+    width: 5px;
+    height: 5px;
+
+    &::after {
+      width: 11.48px;
+      height: 11.48px;
+    }
+  }
+
+  .a_P {
+    margin-right: calc(73 / 320 * 100%);
+  }
+
+  .amount_price::after {
+    height: 1px;
+    left: 19px;
+    width: 89%;
+  }
+
+  .moneys span {
+    font-size: 13px;
+    right: -20px;
+    top: -30px;
+  }
+
+  span .little-dollar {
+    top: 1px;
+  }
+
+  .circle-s {
+    width: 11.48px;
+    height: 11.48px;
+    border: 1px solid #f9804b;
+  }
+
+  .circle-l {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #f9804b;
+  }
+
+  .anotheramount {
+    margin-top: 48px;
+  }
+
+  .monthlyonce {
+    padding: 0;
+    margin: 26px auto 0;
+    width: 220px;
+  }
+
+  .monthly-once {
+    margin-right: 53px;
+  }
+
+  .sharetext {
+    width: 301px;
+    padding: 0;
+  }
+
+  .footer__logo {
+    padding-bottom: 14px;
+    width: 132px;
+    letter-spacing: 0.2px;
+
+    &_icon {
+      top: 12px;
+      left: 75px;
+    }
+  }
+
+  .donateheader__logo {
+    left: 2px;
+    width: 132px;
+    padding-bottom: 8px;
+    letter-spacing: 0.2px;
+  }
+
+  .footer__nav {
+    padding-top: 2px;
+  }
+
+  .donatelogo_icon {
+    top: 1px;
+    left: 73px;
+  }
+}
