@@ -194,6 +194,10 @@ body {
   margin-right: 10px;
 }
 
+.button__fame_clear {
+  width: 135px;
+}
+
 .winning {
   min-height: 200px;
 }
