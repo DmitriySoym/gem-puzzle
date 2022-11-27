@@ -8,11 +8,10 @@
 }
 
 body {
-  padding-top: 6vh;
-  text-align: center;
-
   width: 100vw;
   height: 100vh;
+  padding-top: 6vh;
+  text-align: center;
   background: inherit;
   overflow-x: hidden;
 
@@ -21,11 +20,9 @@ body {
 
 .appBody {
   margin: 0 auto;
-
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-
   border-radius: 8px;
 }
 
